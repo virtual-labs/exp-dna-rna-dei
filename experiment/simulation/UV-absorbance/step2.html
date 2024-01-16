@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.counter{
+			position: absolute;
+			background-color: transparent;
+			margin-top: 130px;
+			padding: 2px;
+			font-weight: bold;
+			font-size: 21px;
+			color: #777;
+			transform: rotate(270deg);
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps">In this step, we zero the blank sample to correct the baseline absorbance from the solvent, ensuring accurate sample absorbance quantification. For this click on the lid of the spectrophotometer to open it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step3.html"> Next Step</a>
+      </div>
+      <hr>
+
+
+      <img src="images/spc1.png" id="spc1" class="dspblk" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images/spc2.png" id="spc2" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images/spc3.png" id="spc3" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images/spc4.png" id="spc4" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
+	 
+	  <!-- <img src="images/spc3.png" id="spc3" style="position: absolute;height: 362px;">
+ -->
+
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 30px;margin-top: 180px;width: 165px;height:195px;background-color: transparent;border: none;">
+	  </button>
+
+
+	  <button id="step2" onclick="step2();" style="position: absolute;margin-left: 575px;width: auto;margin-top: 280px;border: none;">
+	  	<img src="images/sqtbw.png" id="sqtb2w" style="position: absolute;height: 145px;" >
+	  	<img src="images/sqtbxxx.png" id="t1" style="position: absolute;width: 35px;margin-top: 20px;z-index: 5" >
+	  </button>
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 650px;width: auto;margin-top: 280px;border: none;">
+	  	<img src="images/sqtbw.png" id="sqtb1w" style="position: absolute;height: 145px;" >
+	  	<img src="images/sqtbxxx.png" id="t2" style="position: absolute;width: 35px;margin-top: 20px;z-index: 5" >
+	 </button>
+
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 725px;width: auto;margin-top: 275px;border: none;">
+	  	<img src="images/tbox.png" id="tbox1" style="position: absolute;margin-left: 9px;height: 150px;" >
+	  	
+	  </button>
+
+
+	  
+	 
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 1000px;width: auto;margin-top: 10px;border: none;">
+	  	<img src="images/ss1.png" id="ss1" style="position: absolute;height: 420px;" >
+	  	<img src="images/ss1x.png" id="ss1x" class="dsphdd" style="position: absolute;height: 418px;margin-top: 1px;" >
+	  </button>
+
+
+	
+
+
+	  
+	  <img src="images/srn.png" id="srn4" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 537px;height: 400px;">
+	  <img src="images/srnx.png" id="srn4x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 537px;height: 400px;">
+	  <img src="images/srn.png" id="srn3" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 612px;height: 400px;">
+	  <img src="images/srnx.png" id="srn3x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 612px;height: 400px;">
+	  <img src="images/srn.png" id="srn2"  class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 745px;height: 400px;">
+	  <img src="images/srnx.png" id="srn2x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 745px;height: 400px;">
+	  <img src="images/srn.png" id="srn1x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 875px;height: 400px;">
+	  <img src="images/srne.png" id="srn1" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 875px;height: 400px;">
+	  
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 950px;margin-top: 50px;width: 50px;height:50px;background-color: transparent;border: none"></button>
+
+
+
+	  <span style="position: absolute;margin-top: 155px;margin-left: 305px;font-size: 21px;" id="result"></span>
+
+	   <button id="EA260" onclick="step5();" style="position: absolute;margin-left: 298px;margin-top: 220px;width: 80px;height:28px;background-color: transparent;border: none"></button>
+	   <button id="EA280" onclick="step6();" style="position: absolute;margin-left: 394px;margin-top: 220px;width: 80px;height:28px;background-color: transparent;border: none"></button>
+
+	   <button id="EAratio" onclick="stepx();" style="position: absolute;margin-left: 298px;margin-top: 259px;width: 80px;height:28px;background-color: transparent;border: none"></button>
+	   <button id="EConc." onclick="stepx();" style="position: absolute;margin-left: 394px;margin-top: 259px;width: 80px;height:28px;background-color: transparent;border: none"></button>
+
+	   <button id="EBlank" onclick="step3();" style="position: absolute;margin-left: 298px;margin-top: 299px;width: 80px;height:28px;background-color: transparent;border: none"></button>
+	   <button id="ETest" onclick="stepx();" style="position: absolute;margin-left: 394px;margin-top: 299px;width: 80px;height:28px;background-color: transparent;border: none"></button>
+	   <button id="EEnter" onclick="step4();" style="position: absolute;margin-left: 298px;margin-top: 339px;width: 175px;height:28px;background-color: transparent;border: none"></button>
+
+	
+
+
+	 
+	  
+
+
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 175px;margin-top: 437px;">Spectrophotometer</span>
+	  <span id="eths2" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 525px;margin-top: 437px;">Blank Control <br>(cuvettes)</span>
+	  <span id="eths3" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 625px;margin-top: 437px;">Test Sample <br>(cuvettes)</span>
+	  <span id="eths4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 750px;margin-top: 437px;">DNA Sample</span>
+	  <span id="eths5" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 1025px;margin-top: 437px;">Microliter Pipette</span>
+	 
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+
+
+function step1()
+{
+	if(step==0)
+	{
+		$("#spc1").addClass("dsphdd");
+		$("#spc2").removeClass("dsphdd");
+		$("#spc2").addClass("dspblk");
+		step=1;
+		$("#masteps").text("Now, click on the Blank cuvette to insert it into the spectrophotometer.");
+		
+	}
+	if(step==2)
+	{
+		$("#spc3").removeClass("dspblk");
+		$("#spc3").addClass("dsphdd");
+		$("#spc1").removeClass("dsphdd");
+		$("#spc1").addClass("dspblk");
+		step=3;
+		$("#masteps").text("Now, click on the blank button to set the machine to blank sample mode.");
+		
+	}
+	
+}
+
+function step2()
+{
+	if (step==1)
+	{
+		$("#sqtb2w").addClass("dsphdd");
+		$("#spc2").removeClass("dspblk");
+		$("#spc2").addClass("dsphdd");
+		$("#spc3").removeClass("dsphdd");
+		$("#spc3").addClass("dspblk");
+		$("#eths2").addClass("dsphdd");
+		$("#t1").addClass("dsphdd");
+		step=2;
+		$("#masteps").text("Click on spectrophotometer lid to close it.Ensure that the cuvette is inserted properly so that light can pass through it.");
+	}
+	
+}
+
+function step3()
+{
+	if (step==3)
+	{
+		$("#result").text("S:Blank Sample");
+		$("#masteps").text("Press Enter to confirm");
+		step=4;
+	}
+	
+}
+
+function step4()
+{
+	if (step==4)
+	{
+		$("#result").text("M:Blank Sample");
+		$("#masteps").text("Press A260 to take absorbance readings of the blank sample at 260nm.");
+		step=5;
+	}
+}
+
+function step5()
+{
+	if (step==5)
+	{
+		$("#result").text("A260: 0.0001");
+		step=6;
+		$("#masteps").text("Press A280 to take absorbance readings of the blank sample at 280nm.");
+	}
+}
+
+function step6()
+{
+	if (step==6)
+	{
+		$("#result").text("A280: 0.001");
+		step=7;
+		$("#masteps").text("Click on the next step to take a test sample reading.");
+		$("#nextstep").removeClass("dsphdd");
+		$("#nextstep").addClass("dspblk");
+	}
+}
+
+// function step2()
+// {
+// 	if(step==1)
+// 	{
+// 		$("#srn1").removeClass("dspblk");
+// 		$("#srn1").addClass("dsphdd");
+// 		$("#srn1x").removeClass("dsphdd");
+// 		$("#srn1x").addClass("dspblk");
+// 		step=2;
+// 	}
+	
+// }
+
+// function step3()
+// {
+// 	if(step==2)
+// 	{
+// 		$("#srn1x").removeClass("dspblk");
+// 		$("#srn1x").addClass("dsphdd");
+// 		$("#srn2x").removeClass("dsphdd");
+// 		$("#srn2x").addClass("dspblk");
+// 		step=3;
+// 		setTimeout(function(){
+// 		    $('#srn2').removeClass('dsphdd');
+// 		    $("#srn2").addClass("dspblk");
+// 		    $("#srn2x").fadeOut(0);
+		    
+// 		},1000);
+// 	}
+	
+
+// 	if(step==4)
+// 	{
+// 		$("#srn3x").removeClass("dspblk");
+// 		$("#srn3x").addClass("dsphdd");
+// 		$("#srn2x").fadeIn(0);
+// 		step=5;
+// 		setTimeout(function(){
+// 		    $('#srn2').removeClass('dsphdd');
+// 		    $("#srn2").addClass("dspblk");
+// 		    $("#srn2x").fadeOut(0);
+// 		    $('#srn2').removeClass('dsphdd');
+// 		    $("#srn2").addClass("dspblk");
+		    
+// 		},1000);
+// 	}
+	
+	
+// }
+
+// function step4()
+// {
+// 	if(step==3)
+// 	{
+// 		$("#srn2").removeClass("dspblk");
+// 		$("#srn2").addClass("dsphdd");
+// 		$("#srn3").removeClass("dsphdd");
+// 		$("#srn3").addClass("dspblk");
+// 		step=4;
+// 		setTimeout(function(){
+// 		    $('#srn3x').removeClass('dsphdd');
+// 		    $("#srn3x").addClass("dspblk");
+// 		    $("#srn3").fadeOut(0);
+		
+// 		    $('#sqtb1').removeClass('dspblk');
+// 		    $("#sqtb1").fadeOut(0);
+// 		    $('#sqtb1w').removeClass('dsphdd');
+// 		    $("#sqtb1w").addClass("dspblk");
+		    
+// 		},1000);
+// 	}
+// }
+
+
+// function step5()
+// {
+// 	if(step==5)
+// 	{
+// 		$("#srn2").removeClass("dspblk");
+// 		$("#srn2").addClass("dsphdd");
+// 		$("#srn4").removeClass("dsphdd");
+// 		$("#srn4").addClass("dspblk");
+// 		step=6;
+// 		setTimeout(function(){
+// 		    $('#srn4x').removeClass('dsphdd');
+// 		    $("#srn4x").addClass("dspblk");
+// 		    $("#srn4").fadeOut(0);
+
+// 		    $('#sqtb2').removeClass('dspblk');
+// 		    $("#sqtb2").fadeOut(0);
+// 		    $('#sqtb2w').removeClass('dsphdd');
+// 		    $("#sqtb2w").addClass("dspblk");
+// 		},1000);
+
+// 		setTimeout(function(){
+// 			$("#srn4x").fadeOut(0);
+// 		    $("#ss1x").fadeOut(0);
+// 			// $("#ss1").fadeOut(0);
+// 			// $("#ss1").fadeIn(50);
+// 			$("#ss1").removeClass("dsphdd");
+// 			$("#ss1").addClass("dspblk");
+		    
+// 		},2000);
+
+
+// 	}
+// }
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
