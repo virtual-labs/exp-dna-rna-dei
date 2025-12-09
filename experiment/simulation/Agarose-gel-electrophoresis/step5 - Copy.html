@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.counter{
+			position: absolute;
+			background-color: transparent;
+			margin-top: 130px;
+			padding: 2px;
+			font-weight: bold;
+			font-size: 21px;
+			color: #777;
+			transform: rotate(270deg);
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps">In this part of the experiment, DNA samples are placed inside the agarose gel well.For this click on Microliter Pipette.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step6.html"> Next Step</a>
+      </div>
+      <hr>
+
+
+
+      <img src="images/frm7.png" id="frm7" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
+      <img src="images/frm8.png" id="frm8" class="dsphdd" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
+      <img src="images/frm9.png" id="frm9" class="dsphdd" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
+      <img src="images/frm10.png" id="frm10" class="dsphdd" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
+      <img src="images/frm11.png" id="frm11" class="dsphdd" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
+
+      <img src="images/ds1.png" id="ds1"  style="position: absolute;margin-top: 240px;margin-left: 475px;height: 165px;">
+      <img src="images/ds2.png" id="ds2" class="dsphdd" style="position: absolute;margin-top: 240px;margin-left: 475px;height: 165px;">
+      <img src="images/ds3.png" id="ds3" class="dsphdd" style="position: absolute;margin-top: 240px;margin-left: 475px;height: 165px;">
+      <img src="images/ds4.png" id="ds4" class="dsphdd" style="position: absolute;margin-top: 240px;margin-left: 475px;height: 165px;">
+
+      <img src="images/d6.png" id="d6" class="" style="position: absolute;margin-top: 275px;margin-left: 550px;width:260px;">
+      <img src="images/d7.png" id="d7" class="dsphdd" style="position: absolute;margin-top: 243px;margin-left: 550px;width:260px;">
+      <img src="images/d8.png" id="d8" class="dsphdd" style="position: absolute;margin-top: 243px;margin-left: 550px;width:260px;">
+      <img src="images/d9.png" id="d9" class="dsphdd" style="position: absolute;margin-top: 243px;margin-left: 550px;width:260px;">
+      <img src="images/d10.png" id="d10" class="dsphdd" style="position: absolute;margin-top: 243px;margin-left: 550px;width:260px;">
+
+
+      <img src="images/pptdn1.png" id="pptdn11" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 450px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptdn12" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 450px;height: 315px;">
+
+      <img src="images/pptdn1.png" id="pptdn21" class="dsphdd" style="position: absolute;margin-top: 60px;margin-left: 77px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptdn22" class="dsphdd" style="position: absolute;margin-top: 60px;margin-left: 77px;height: 315px;">
+
+      <img src="images/pptdn1.png" id="pptdn31" class="dsphdd" style="position: absolute;margin-top: 30px;margin-left: 79px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptdn32" class="dsphdd" style="position: absolute;margin-top: 30px;margin-left: 79px;height: 315px;">
+
+      <img src="images/pptdn1.png" id="pptdn41" class="dsphdd" style="position: absolute;margin-top: 5px;margin-left: 82px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptdn42" class="dsphdd" style="position: absolute;margin-top: 5px;margin-left: 82px;height: 315px;">
+
+      <img src="images/pptdn2.png" id="pptdn51" class="dsphdd" style="position: absolute;margin-top: -25px;margin-left: 84px;height: 315px;">
+      <img src="images/pptdn1.png" id="pptdn52" class="dsphdd" style="position: absolute;margin-top: -25px;margin-left: 84px;height: 315px;">
+
+      <img src="images/ppt1.png" id="ppt1" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 855px;height: 315px;">
+      <img src="images/pptdn2.png" id="ppt2" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 855px;height: 315px;">
+
+
+
+
+
+
+      <img src="images/pptdn1.png" id="pptds11" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 555px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptds12" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 555px;height: 315px;">
+
+      <img src="images/pptdn1.png" id="pptdss11" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 632px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptdss12" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 632px;height: 315px;">
+
+      <img src="images/pptdn1.png" id="pptdsss11" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 708px;height: 315px;">
+      <img src="images/pptdn2.png" id="pptdsss12" class="dsphdd" style="position: absolute;margin-top: 20px;margin-left: 708px;height: 315px;">
+
+
+      
+
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 850px;width: auto;margin-top: 58px;border: none;">
+	  	<img src="images/pptstd.png" id="indc" style="position: absolute;height: 350px;">
+	  </button>
+
+	  <button id="step2" onclick="step2();" style="position: absolute;margin-left: 900px;width: 50px;height: 50px;margin-top: 50px;border: none; background-color: transparent;">
+	  </button>
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left: 478px;width: 50px;height: 150px;margin-top: 250px;border: none; background-color: transparent;">
+	  </button>
+
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 100px;margin-top: 435px;">Electrophoresis Tank</span>
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 450px;margin-top: 435px;">DNA ladder</span>
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 625px;margin-top: 435px;">DNA samples</span>
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 900px;margin-top: 435px;">Microliter pipette</span>
+
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()
+{
+	if(step==0)
+	{
+		$("#step1").css('visibility', 'hidden').fadeOut(100);
+		$("#ppt1").css('visibility', 'visible').fadeIn(100);
+		step=1;
+		$("#masteps").text("Now, click on the pipette's scroll control button to set its reading to 100\u00B5l.");
+	}
+}
+
+function step2()
+{
+	if(step==1)
+	{
+		$("#step2").css('visibility', 'hidden').fadeOut(100);
+		$("#ppt1").css('visibility', 'hidden').fadeOut(0);
+		$("#ppt2").css('visibility', 'visible').fadeIn(0);
+		step=2;
+		$("#masteps").text("Now, click on the DNA ladder and all three DNA samples and load it into the first well of the agarose gel as a reference.");
+	}
+}
+
+function step3()
+{
+	if(step==2)
+	{
+		$("#ppt2").css('visibility', 'hidden').fadeOut(100);
+		$("#pptdn11").css('visibility', 'visible').fadeIn(100);
+		setTimeout(function(){
+			$("#d7").css('visibility', 'visible').fadeIn(0);
+			$("#d6").css('visibility', 'hidden').fadeOut(100);
+		},300);
+		setTimeout(function(){
+			$("#pptdn11").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn12").css('visibility', 'visible').fadeIn(0);
+			$("#ds1").css('visibility', 'hidden').fadeOut(0);
+			$("#ds4").css('visibility', 'visible').fadeIn(0);
+		},1000);
+
+
+		setTimeout(function(){
+			$("#pptdn12").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn22").css('visibility', 'visible').fadeIn(0);
+		},2000);
+		setTimeout(function(){
+			$("#pptdn22").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn21").css('visibility', 'visible').fadeIn(0);
+			$("#frm8").css('visibility', 'visible').fadeIn(0);
+			$("#frm7").css('visibility', 'hidden').fadeOut(100);
+		},2500);
+		
+		
+		setTimeout(function(){
+			$("#pptdn21").css('visibility', 'hidden').fadeOut(0);
+			$("#pptds11").css('visibility', 'visible').fadeIn(100);
+		},3500);
+		setTimeout(function(){
+			$("#pptds11").css('visibility', 'hidden').fadeOut(0);
+			$("#pptds12").css('visibility', 'visible').fadeIn(0);
+			$("#d8").css('visibility', 'visible').fadeIn(0);
+			$("#d7").css('visibility', 'hidden').fadeOut(0);
+		},4000);
+
+
+		setTimeout(function(){
+			$("#pptds12").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn32").css('visibility', 'visible').fadeIn(0);
+		},5000);
+		setTimeout(function(){
+			$("#pptdn32").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn31").css('visibility', 'visible').fadeIn(0);
+			$("#frm9").css('visibility', 'visible').fadeIn(0);
+			$("#frm8").css('visibility', 'hidden').fadeOut(100);
+		},5500);
+
+
+		setTimeout(function(){
+			$("#pptdn31").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdss11").css('visibility', 'visible').fadeIn(100);
+		},6500);
+		setTimeout(function(){
+			$("#pptdss11").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdss12").css('visibility', 'visible').fadeIn(0);
+			$("#d9").css('visibility', 'visible').fadeIn(0);
+			$("#d8").css('visibility', 'hidden').fadeOut(0);
+		},7000);
+
+
+		setTimeout(function(){
+			$("#pptdss12").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn42").css('visibility', 'visible').fadeIn(0);
+		},8000);
+		setTimeout(function(){
+			$("#pptdn42").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn41").css('visibility', 'visible').fadeIn(0);
+			$("#frm10").css('visibility', 'visible').fadeIn(0);
+			$("#frm9").css('visibility', 'hidden').fadeOut(100);
+		},8500);
+
+
+
+		setTimeout(function(){
+			$("#pptdn41").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdsss11").css('visibility', 'visible').fadeIn(100);
+		},9500);
+		setTimeout(function(){
+			$("#pptdsss11").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdsss12").css('visibility', 'visible').fadeIn(0);
+			$("#d10").css('visibility', 'visible').fadeIn(0);
+			$("#d9").css('visibility', 'hidden').fadeOut(0);
+		},10000);
+
+
+		setTimeout(function(){
+			$("#pptdsss12").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn52").css('visibility', 'visible').fadeIn(0);
+		},11000);
+		setTimeout(function(){
+			$("#pptdn52").css('visibility', 'hidden').fadeOut(0);
+			$("#pptdn51").css('visibility', 'visible').fadeIn(0);
+			$("#frm11").css('visibility', 'visible').fadeIn(0);
+			$("#frm10").css('visibility', 'hidden').fadeOut(100);
+		},11500);
+
+
+		setTimeout(function(){
+			$("#pptdn51").css('visibility', 'hidden').fadeOut(100);
+		},12500);
+
+		step=3;
+	}
+}
+
+// function step2()
+// {
+// 	if(step==1)
+// 	{
+// 		$("#step2").css('visibility', 'hidden').delay(100).fadeOut();
+// 		$("#eths3").css('visibility', 'hidden').delay(100).fadeOut();
+
+// 		$("#frm3").css('visibility', 'visible').delay(100).fadeIn();
+// 		setTimeout(function(){
+// 			$("#frm2").css('visibility', 'hidden');
+// 		},500);
+// 		step=2;
+// 	}
+// }
+
+// function step3()
+// {
+// 	if(step==2)
+// 	{
+// 		$("#step3").css('visibility', 'hidden').delay(100).fadeOut();
+// 		$("#eths4").css('visibility', 'hidden').delay(100).fadeOut();
+
+// 		$("#frm4").css('visibility', 'visible').delay(100).fadeIn();
+// 		$("#flskpor").css('visibility', 'visible').delay(100).fadeIn();
+// 		setTimeout(function(){
+// 			$("#frm3").css('visibility', 'hidden');
+// 		},500);
+// 		setTimeout(function(){
+// 			$("#flskpor").css('visibility', 'hidden').delay(500).fadeOut();
+// 		},1000);
+// 		step=3;
+// 	}
+// }
+
+// function step4()
+// {
+// 	if(step==3)
+// 	{
+// 		$("#step4").css('visibility', 'hidden').delay(100).fadeOut();
+// 		$("#eths5").css('visibility', 'hidden').delay(100).fadeOut();
+// 		$("#frm5").css('visibility', 'visible').delay(100).fadeIn();
+// 		setTimeout(function(){
+// 			$("#frm4").css('visibility', 'hidden');
+// 		},500);
+// 		setTimeout(function(){
+// 			$("#frm4").css('visibility', 'hidden');
+// 			$("#frm6").css('visibility', 'visible').delay(100).fadeIn();
+// 		},1000);
+		
+// 		setTimeout(function(){
+// 			$("#frm5").css('visibility', 'hidden');
+// 		},1500);
+
+// 		step=4;
+// 	}
+// }
+
+// function step5()
+// {
+// 	if(step==4)
+// 	{
+// 		$("#step5").css('visibility', 'hidden').delay(100).fadeOut();
+// 		$("#eths6").css('visibility', 'hidden').delay(100).fadeOut();
+// 		$("#frm7").css('visibility', 'visible').delay(100).fadeIn();
+// 		$("#measpr").css('visibility', 'visible').delay(100).fadeIn();
+// 		setTimeout(function(){
+// 			$("#frm5").css('visibility', 'hidden');
+// 		},500);
+// 		setTimeout(function(){
+// 			$("#measpr").css('visibility', 'hidden').delay(500).fadeOut();
+// 		},1000);
+// 		step=5;
+// 	}
+// }
+</script>
+
+
+
+
+
+
+
+</body></html>

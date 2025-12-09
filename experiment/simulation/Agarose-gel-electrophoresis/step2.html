@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">During the preparation of Agarose gel, the next step involves placing the flask containing the mixture into the oven. For this click on flask.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step3.html"> Next Step</a>
+		</div>
+		<div id="main">
+      <button id="step2" onclick="step2();" style="position: absolute;margin-left: 5px;width: auto;margin-top:100px;border: none;">
+      	<img src="images/ovnc.png" id="ovnc" style="position: absolute;height: 250px;" >
+	  	<img src="images/ovno.png" id="ovno" class="dsphdd" style="position: absolute;margin-left: 3px;height: 250px;" >
+	  </button>
+
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left: 235px;width: auto;margin-top: 178px;border: none;">
+	  	<img src="images/flskxx.png" id="flskxx" class="dsphdd" style="position: absolute;height: 110px;" >
+	  	<img src="images/flskf.png" id="flskf" class="dsphdd" style="position: absolute;height: 110px;" >
+	  </button>
+	  
+
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 550px;width: auto;margin-top: 190px;border: none;">
+	  	<img src="images/flskxx.png" id="flskxxb" style="position: absolute;height: 130px;" >
+	  </button>
+
+	  <button id="step4" onclick="step4();" style="position: absolute;margin-left: 725px;width: auto;margin-top: 175px;border: none;">
+	  	<img src="images/cool.png" id="cool" style="position: absolute;width:325px;" >
+	  </button>
+	  <img src="images/flskf.png" id="flskfw" class="dsphdd" style="position: absolute;margin-left: 850px;width: auto;margin-top: 135px;;height: 110px;" >
+	  
+
+
+	
+
+
+	 
+	   <span class="counter" id="CpHval" style="position: absolute;margin-top: 165px;margin-left: 452px;font-size: 17px;font-family: 'digital-7', sans-serif;z-index: 5;background-color: transparent;color: #888"></span>
+	   <span id="wtclr" class="dsphdd" style="position: absolute;margin-top: 280px;margin-left: 847px;font-size: 15px;font-family: 'digital-7', sans-serif;z-index: 5;background-color: transparent;color: #777">0:50 | 50<sup>o</sup>C</span>
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	if(step==0)
+	{
+		$("#ovno").css('visibility', 'visible').delay(100).fadeIn();
+		setTimeout(function(){
+			   $("#ovnc").css('visibility', 'hidden').delay(100).fadeOut();
+		},200);
+		setTimeout(function(){
+			   $("#ovnc").css('visibility', 'hidden').delay(100).fadeOut();
+		},200);
+		setTimeout(function(){
+			   $("#step1").delay(100).fadeOut();
+			   $("#flskxx").css('visibility', 'visible').delay(100).fadeIn();
+		},700);
+		step=1;
+	$("#masteps").text("Now, click on the start button of the oven to heat the mixture for maximum up to 3 minutes.");
+	}
+
+	
+}
+
+function step2()
+{
+	if(step==1)
+	{
+		$("#ovno").delay(100).fadeOut();
+		setTimeout(function(){
+			$("#flskxx").delay(0).fadeOut();
+			$("#ovnc").css('visibility', 'visible').delay(100).fadeIn();
+		},100);
+
+		setTimeout(function(){
+			   $("#CpHval").text("3.0");
+				startCounter();
+		},200);
+
+		setTimeout(function(){
+			   $("#ovno").css('visibility', 'visible').delay(100).fadeIn();
+			   $("#flskf").css('visibility', 'visible').delay(0).fadeIn();
+		},5200);
+		setTimeout(function(){
+			   $("#ovnc").css('visibility', 'hidden').delay(500).fadeOut();
+			   
+		},5600);
+	step=2;	
+		$("#masteps").text("Now, click on the flask placed inside the oven to transfer it into the water cooling system. Before doing so, ensure that the mixture has boiled properly and become transparent.");
+	}
+	
+
+}
+
+function step3()
+{
+	if(step==2)
+	{
+		step=3;
+		$("#flskf").css('visibility', 'hidden').delay(0).fadeOut();
+		$("#flskfw").css('visibility', 'visible').delay(100).fadeIn();
+		setTimeout(function(){
+			   $("#ovnc").css('visibility', 'visible').delay(100).fadeIn();
+		},300);
+				setTimeout(function(){
+			   $("#ovno").css('visibility', 'hidden').delay(100).fadeOut();
+		},400);
+
+		$("#masteps").html("Now, click on the green start button of the cooling system to cool down the mixture upto 50<sup>o</sup>C for 10 minutes.");
+		
+	}
+		
+
+}
+
+function step4()
+{
+	if(step==3)
+	{
+		$("#masteps").html("Now, click on next for further steps.");
+		$("#wtclr").css('visibility', 'visible').delay(50).fadeIn();
+		$("#nextstep").css('visibility', 'visible').delay(50).fadeIn();
+	}
+}
+
+
+
+
+
+// if (step==6)
+// 	{
+// 		$("#ppt1").addClass("dsphdd");
+// 		$("#ppt2").removeClass("dsphdd");
+// 		$("#ppt2").addClass("dspblk");
+
+// 		$("#test").addClass("dsphdd");
+// 		$("#test0").addClass("dspblk");
+// 		$('#test0').addClass('mixx');
+// 		setTimeout(function(){
+// 		    $('#test0').removeClass('mixx');
+// 		},1500);
+// 		$("#test0").delay(1000).fadeOut();
+		
+// 		$("#fnlred").addClass("dspblk");
+// 		$("#fnlred").hide().fadeIn(1500);
+// 		$('#fnlred').addClass('mixx');
+// 		setTimeout(function(){
+// 		    $('#fnlred').removeClass('mixx');
+// 		},3500);
+// 		$("#fnlred").delay(1000).fadeOut();
+
+// 		$('#finl').addClass('dspblk');
+// 		$("#finl").hide().fadeIn(3200);
+// 		$('#finl').addClass('mixx');
+// 		setTimeout(function(){
+// 		    $('#finl').removeClass('mixx');
+// 		},3500);
+// 		$("#ppt3").removeClass("dsphdd");
+// 		$("#ppt3").addClass("dspblk");
+// 		$("#ppt3").hide().fadeIn(3500);
+// 		$("#ppt2").fadeOut(4500);
+// 		step=7;
+// 		$("#masteps").text("Note the reading of Test Sample. Now click next to calculate Acid value of oil.");
+// 		$("#nextstep").css("visibility","visible");
+// 	}
+
+
+
+function startCounter(){
+	$('.counter').each(function (index) {
+		var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+	    $(this).prop('Counter',0).animate({
+	        Counter: $(this).text()
+	    }, {
+	        duration: 5000,
+	        easing: 'swing',
+	        step: function (now) {
+	            $(this).text(parseFloat(now).toFixed(size));
+	        }
+	    });
+	});
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
