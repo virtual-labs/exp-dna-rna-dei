@@ -2,38 +2,58 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Saponification number is the number of milligrams of KOH required to saponify 1 g fat. Which of the following statement is true about saponification number?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The shorter is the chain length of fatty acids the higher is the saponification number",
+        "b": "The shorter is the chain length of fatty acids, the lower will be the saponification number",
+        "c": "The higher the chain saturation of fatty acid, the lower will be saponification number",
+        "d": "The lower is the saturation of fatty acid, the higher will be saponification number"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The degree of unsaturation of lipid can be measured as ____________.?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Saponification number",
+        "b": "Iodine number",
+        "c": "Polenske number",
+        "d": "Reichert Meissil Number"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Generally fats with unsaturated fatty acids are ____________ at room temperature (25'C)?",
+      "answers": {
+        "a": "Solid",
+        "b": "Liquid",
+        "c": "Liquid in the presence of oxygen",
+        "d": "Liquid in the absence of oxygen"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Iodine number is defined as number of grams of iodine needed for the iodination of ________ gram/grams of oil or fat?",
+      "answers": {
+        "a": "1",
+        "b": "5",
+        "c": "100",
+        "d": "1000"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "The smaller is the saponification value, the higher will be the molecular weight of oil or fat.?",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     }
+    
   ]
 }

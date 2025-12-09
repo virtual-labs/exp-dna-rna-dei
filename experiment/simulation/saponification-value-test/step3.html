@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#CpHval{
+			border:none;width: 107px;position: absolute;margin-top: 282px;margin-left: 52px;height: 25px;z-index:2;text-align: center;font-size: 24px;line-height: 1;font-family: digital-7;color: gray;
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">set reflux condencer and heated both in boiling water bath for 1 hr</p> <a id="nextstep" class="btn btn-success" href="step4.html"> Next Step</a>
+		</div>
+		<div id="main"> 
+      <img src="imgs3/blank.png" id="blank" style="position: absolute;height: 125px;margin-top: 80px;z-index: 5;margin-left: 318px;" >
+      <img src="imgs3/test.png" id="test" style="position: absolute;height: 125px;margin-top: 80px;z-index: 5;margin-left: 140px;" >
+
+
+	  <img src="imgs3/bur1.png" id="bur1" style="position: absolute;margin-top: 175px;margin-left: 72px;width: 420px;">
+
+	  <img src="imgs3/bur2.png" id="bur2" class="dsphdd" style="position: absolute;margin-top: 175px;margin-left: 72px;width: 420px;">
+
+	  <span id="CpHval" class="counter">00:00</span>
+	
+		<button id="step1" onclick="step1()" style="width: 50px;height: 50px;position: absolute;margin-top: 250px;margin-left: 255px;z-index: 5;background-color: transparent;border: none;"></button>
+
+	  <span id="blnks1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 317px;margin-top: 35px;">BLANK Sample</span>
+	  <span id="tsts1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 145px;margin-top: 35px;">TEST Sample</span>
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+
+
+
+
+function step1()
+{
+	$("#bur1").addClass("dsphdd");
+	$("#bur2").removeClass("dsphdd");
+	$("#bur2").addClass("dspblk");
+	$("#CpHval").css("color", "black");
+	startTimer();
+	step=1;
+
+}
+
+
+function startTimer() {
+  var startTime = new Date().getTime();
+  var endTime = startTime + 90 * 1000; // 1 minute 30 seconds
+  var duration = 5000; // 5 seconds
+
+  var timerInterval = setInterval(function() {
+    var currentTime = new Date().getTime();
+    var timeDifference = currentTime - startTime;
+
+    if (timeDifference >= duration) {
+      clearInterval(timerInterval);
+      $("#CpHval").text("1:00"); // Set final timer value
+    } else {
+      var progress = timeDifference / duration;
+      var minutes = Math.floor(progress * 1);
+      var seconds = Math.floor((progress * 60) % 60);
+
+      var timerText = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+      $("#CpHval").text(timerText);
+    }
+    $("#nextstep").css("visibility","visible");
+  }, 50); // Update timer every 50 milliseconds
+}
+
+
+// function startCounter(){
+// 	$('.counter').each(function (index) {
+// 		var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+// 	    $(this).prop('Counter',0).animate({
+// 	        Counter: $(this).text()
+// 	    }, {
+// 	        duration: 2000,
+// 	        easing: 'swing',
+// 	        step: function (now) {
+// 	            $(this).text(parseFloat(now).toFixed(size));
+// 	        }
+// 	    });
+// 	});
+// 	$("#CpHval").text("1:00H");
+// }	
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

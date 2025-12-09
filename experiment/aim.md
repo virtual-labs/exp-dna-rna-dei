@@ -1,3 +1,2 @@
-### Aim
-
-The determination of the quality of nucleic acid (free from protein contamination or RNA/DNA contamination) and accurate concentration of nucleic acid is important for downstream applications.  Techniques like transfection, cloning, polymerase chain reaction (PCR), and next-generation sequencing (NGS), all require high-quality nucleic acid. These applications often have a specific target; a nanogram range of nucleic acid concentration for optimal performance. Inaccurate quantification can increase variability in downstream assays and affect the quality of results.
+### Aim of the experiment
+The aim of this experiment is the qualitative analysis of lipids (oils and fats) by simple laboratory methods that help in the determination of the presence of lipids, their confirmatory test of the type of lipids. The detailed analysis includes the determination of Saponification value that can check the adulteration, acid value can determine the rancidity and iodine value will determine the extent of unsaturation.

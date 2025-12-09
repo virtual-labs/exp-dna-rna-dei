@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+		
+	.eqp{
+		font-size: 15px;
+		font-style: italic;
+		color: black;
+	}
+	label{
+		font-weight: normal;
+	}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps"> Calculation of Saponification value</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+      </div>
+      <hr>
+	 
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<div class="form-group">
+		    <label>Reading of  Test Sample before titration</label>
+		    <input type="text" class="form-control" id="tstb">
+		</div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<div class="form-group">
+		    <label>Reading of  Test Sample after titration</label>
+		    <input type="text" class="form-control" id="tsta">
+		</div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<div class="form-group">
+		    <label>Reading of  Blank Sample before titration</label>
+		    <input type="text" class="form-control" id="blkb">
+		</div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<div class="form-group">
+		    <label>Reading of  Blank Sample after titration</label>
+		    <input type="text" class="form-control" id="blka">
+		</div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<div class="form-group">
+		    <label>Weight of Oil sample</label>
+		    <input type="text" class="form-control" id="oilwt">
+		</div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<div class="form-group">
+		    <label>Normality of KOH sample</label>
+		    <input type="text" class="form-control" id="nmkh">
+		</div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      	<button class="btn btn-primary" id="calcy" onclick="CalcSphv()">Calculate Saponification Value</button>
+      </div>
+
+      <div id="solans" class="col-lg-12 dsphdd" style="margin-top: 25px;">
+     	<h3>Solution:</h3>
+
+     	<p class="ans">The Saponification Value is: <span id="ans"></span></p>
+      	<img src="images/eqsopv.svg" alt="SVG Image"><br><br>
+      	<p class="eqp">Test Sample Titration Volume = Reading of  Test Sample after titration - Reading of  Test Sample before titration</p>
+      	<p class="eqp">Blank Sample Titration Volume = Reading of  Blank Sample after titration - Reading of  Blank Sample before titration</p>
+      </div>
+	  
+    </div>
+</div>
+
+
+
+
+<script>
+
+function CalcSphv()////
+{
+	var tstb=parseFloat($("#tstb").val());
+	var tsta=parseFloat($("#tsta").val());
+	var blkb=parseFloat($("#blkb").val());
+	var blka=parseFloat($("#blka").val());
+	var oilwt=parseFloat($("#oilwt").val());
+	var nmkh=parseFloat($("#nmkh").val());
+	var tstv=tsta-tstb;
+	var blkv=blka-blkb;
+	var voldff=blkv-tstv
+	var spov=(voldff*nmkh*56)/oilwt;
+	$("#ans").text(spov);
+	$("#solans").removeClass("dsphdd");
+	//$("#solans").removeClass("dsphdd");
+		
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+

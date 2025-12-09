@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+		
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">The final step is titration. Click on Phenolphthalein bottle to add a few drops into Test Sample.</p> <a id="nextstep" class="btn btn-success" href="step5.html"> Next Step</a>
+		</div>
+		<div id="main"> 
+      <img src="imgs4/ppt1.png" id="ppt1" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt2.png" id="ppt2" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt3.png" id="ppt3" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt4.png" id="ppt4" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt5.png" id="ppt5" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      
+
+      <img src="imgs4/finl.png" id="finlbt" class="dsphdd" style="position: absolute;height: 125px;margin-top: 355px;z-index: 2;margin-left: 77px;" >
+      <img src="imgs4/fnlred.png" id="fnlred" class="dsphdd" style="position: absolute;height: 125px;margin-top: 355px;z-index: 2;margin-left: 77px;" >
+
+      <img src="imgs4/drop2.png" id="dropt" class="dsphdd" style="position: absolute;width: 25px;margin-top: 228px;z-index: 2;margin-left: 415px;" >
+      <img src="imgs4/drop2.png" id="dropb" class="dsphdd" style="position: absolute;width: 25px;margin-top: 228px;z-index: 2;margin-left: 590px;" >
+
+
+      <button id="step2" onclick="step2();" style="position: absolute;margin-left: 375px;width: auto;margin-top: 325px;">
+	  	<img src="imgs4/test.png" id="test" style="position: absolute;height: 125px;" >
+	  	<img src="imgs4/test0.png" id="test0" class="dsphdd" style="position: absolute;height: 125px;" >
+	  	<img src="imgs4/finl.png" id="finlt" class="dsphdd" style="position: absolute;height: 125px;" >
+	  </button>
+
+	  <button id="step4" onclick="step4();" style="position: absolute;margin-left: 550px;width: auto;margin-top: 325px;">
+	  	<img src="imgs4/blank.png" id="blank" style="position: absolute;height: 125px;" >
+	  	<img src="imgs4/blank0.png" id="blank0" class="dsphdd" style="position: absolute;height: 125px;" >
+	  	<img src="imgs4/finl.png" id="finlb" class="dsphdd" style="position: absolute;height: 125px;" >
+	  </button>
+
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 725px;width: auto;margin-top: 278px;">	  
+	  	<img src="imgs4/phth.png" id="phth" style="position: absolute;height: 175px;" >
+	  	<img src="imgs4/phth2.png" id="phth2" class="dsphdd" style="position: absolute;height: 175px;" >
+	  </button>
+
+
+	  <button id="step6" onclick="step6();" style="position: absolute;margin-left: 100px;width: 60px;height: 40px;margin-top: 290px;z-index:5 ;border: none;background-color: transparent;"></button>
+	  
+	  <span id="hcls1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 150px;margin-top: 25px;">0.5N HCL</span>
+	  <span id="tsts1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 380px;margin-top: 465px;">TEST Sample</span>
+	  <span id="blnks1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 549px;margin-top: 465px;">BLANK Sample</span>
+	  <span id="phps1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 695px;margin-top: 465px;">Phenolphthalein</span>
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()////
+{
+	if(step==0)
+	{
+		$("#phth").addClass("dsphdd");
+		$("#phth2").removeClass("dsphdd");
+		$("#phth2").addClass("dspblk");
+		$("#dropt").addClass("dspblk");
+		$("#dropt").delay(800).fadeOut();
+		$("#test").delay(800).fadeOut();
+
+		
+		$("#phth2").delay(900).fadeOut(0);
+		$("#phth").addClass("dspblk");
+		$("#phth").hide().delay(850).fadeIn(0);
+		
+		$("#test0").addClass("dspblk");
+		$("#test0").hide().fadeIn(500);
+		step=1;
+		$("#masteps").text("Click on Test Sample to shake it well.");
+	}
+	if(step==2)
+	{
+		$("#phth").fadeOut(0);
+		$("#phth2").fadeIn(0);
+		$("#dropb").removeClass("dsphdd");
+		$("#dropb").addClass("dspblk");
+	
+		$("#dropb").delay(800).fadeOut();
+		$("#blank").delay(800).fadeOut();
+
+		
+		$("#phth2").delay(800).fadeOut();
+		$("#phps1").delay(800).fadeOut();
+		// $("#phth").fadeIn(0);
+		// $("#phth").hide().delay(850).fadeIn(0);
+		
+		$("#dropb").removeClass("dsphdd");
+		$("#blank0").addClass("dspblk");
+		$("#blank0").hide().fadeIn(500);
+		step=3;
+		$("#masteps").text("Click on Blank Sample to shake it well.");
+	}
+
+	
+}
+
+
+
+
+function step2()
+{
+	if (step==1)
+	{
+		$("#test0").addClass("dsphdd");
+		$('#test0').addClass('mixx');
+		setTimeout(function(){
+		    $('#test0').removeClass('mixx');
+		},1000);
+		$("#test0").delay(500).fadeOut();
+		$("#finlt").addClass("dspblk");
+		$("#finlt").hide().fadeIn(500);
+		$('#finlt').addClass('mixx');
+		setTimeout(function(){
+		    $('#finlt').removeClass('mixx');
+		},1000);
+		step=2;
+		$("#masteps").text("Click again on Phenolphthalein bottle to add a few drops into Blank Sample");
+	}
+
+	if (step==4)
+	{
+		$("#step2").addClass("dsphdd");
+		$("#finlbt").removeClass("dsphdd");
+		$("#finlbt").addClass("dspblk");
+		$("#tsts1").addClass("dsphdd");
+		step=5;
+		$("#masteps").text("Click on burette knob to start Titration process.");
+	}
+
+}
+
+
+function step4()
+{
+	if (step==3)
+	{
+		$("#blank0").addClass("dsphdd");
+		$('#blank0').addClass('mixx');
+		setTimeout(function(){
+		    $('#blank0').removeClass('mixx');
+		},1000);
+		$("#blank0").delay(500).fadeOut();
+		$("#finlb").addClass("dspblk");
+		$("#finlb").hide().fadeIn(500);
+		$('#finlb').addClass('mixx');
+		setTimeout(function(){
+		    $('#finlb').removeClass('mixx');
+		},1000);
+		step=4;
+		$("#masteps").text("Click on Test Sample flask for Titration.");
+	}
+	if (step==6)
+	{
+		$("#step4").addClass("dsphdd");
+		$("#blnks1").addClass("dsphdd");
+		$("#fnlred").removeClass("dspblk");
+		$("#fnlred").addClass("dsphdd");
+		$("#finlbt").fadeIn(0);
+		step=7;
+		$("#masteps").text("Click on burette knob to start Titration process again.");
+	}
+
+}
+
+
+function step6()
+{
+	if (step==5)
+	{
+		$("#ppt1").addClass("dsphdd");
+		$("#ppt2").removeClass("dsphdd");
+		$("#ppt2").addClass("dspblk");
+
+		$("#finlbt").addClass("dsphdd");
+		$('#finlbt').addClass('mixx');
+		setTimeout(function(){
+		    $('#finlbt').removeClass('mixx');
+		},3000);
+		$("#finlbt").delay(2500).fadeOut();
+		$("#fnlred").addClass("dspblk");
+		$("#fnlred").hide().fadeIn(3500);
+		$('#fnlred').addClass('mixx');
+		setTimeout(function(){
+		    $('#fnlred').removeClass('mixx');
+		},3500);
+
+		$("#ppt3").removeClass("dsphdd");
+		$("#ppt3").addClass("dspblk");
+		$("#ppt3").hide().fadeIn(3000);
+		$("#ppt2").fadeOut(3500);
+		step=6;
+		$("#masteps").text("Note the reading of Test Sample. Now click on Blank Sample flask for Titration.");
+	}
+
+	if (step==7)
+	{
+		$("#ppt3").fadeOut(0);
+		$("#ppt4").removeClass("dsphdd");
+		$("#ppt4").addClass("dspblk");
+
+		$("#finlbt").addClass("dsphdd");
+		$('#finlbt').addClass('mixx');
+		setTimeout(function(){
+		    $('#finlbt').removeClass('mixx');
+		},3000);
+		$("#finlbt").delay(2500).fadeOut();
+		$("#fnlred").addClass("dspblk");
+		$("#fnlred").hide().fadeIn(3500);
+		$('#fnlred').addClass('mixx');
+		setTimeout(function(){
+		    $('#fnlred').removeClass('mixx');
+		},3500);
+
+		$("#ppt5").removeClass("dsphdd");
+		$("#ppt5").addClass("dspblk");
+		$("#ppt5").hide().fadeIn(3000);
+		$("#ppt4").fadeOut(3500);
+		step=8;
+		$("#masteps").text("Note the reading of Blank Sample. Now click next to calculate Saponification Value");
+		$("#nextstep").css("visibility","visible");
+	}
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

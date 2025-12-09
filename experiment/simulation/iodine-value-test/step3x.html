@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+	
+
+		#nextstep{
+			visibility: hidden;
+		}
+		
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps"> First Step is calibration of the pH meter. Click on pH 4.01 flask.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+      </div>
+      <hr>
+
+      <button id="step1" onclick="step1()" style="position: absolute;height: 125px;margin-top: 235px;z-index: 5;margin-left: 505px;background-color: transparent;border: none;">
+      	<img src="imgs3/blank.png" id="blank" style="height: 125px;" >
+      </button>
+
+      <button id="step2" onclick="step2()" style="position: absolute;height: 125px;margin-top: 235px;z-index: 5;margin-left: 635px;background-color: transparent;border: none;">
+      	<img src="imgs3x/test.png" id="test" style="height: 125px;" >
+      </button>
+
+      <img src="imgs3/blank.png" id="blank1" class="dsphdd" style="position: absolute;margin-top: 225px;z-index: 5;margin-left: 150px;height: 125px;" >
+      <img src="imgs3/test.png" id="test1" class="dsphdd" style="position: absolute;margin-top: 225px;z-index: 5;margin-left: 275px;height: 125px;" >
+	 
+      
+      <button id="step3" onclick="step3()" style="position: absolute;height: 300px;margin-top: 100px;z-index: 0;margin-left: 50px;background-color: transparent;border: none;">
+	  		<img src="imgs3/bur1.png" id="bur1" style="height: 300px;">
+	  </button>
+
+	  <img src="imgs3/bur2.png" id="bur2" class="dsphdd" style="position: absolute;margin-top: 107px;margin-left: 105px;height: 288px;">
+
+	
+		<button id="step1" onclick="step1()" style="width: 50px;height: 50px;position: absolute;margin-top: 250px;margin-left: 255px;z-index: 5;background-color: transparent;border: none;"></button>
+
+	  <span id="blnks1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 490px;margin-top: 370px;">BLANK Sample</span>
+	  <span id="tsts1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 625px; margin-top: 370px;">TEST Sample</span>
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+
+
+
+
+function step1()
+{
+	$("#step1").addClass("dsphdd");
+	$("#blank1").removeClass("dsphdd");
+	$("#blank1").addClass("dspblk");
+	$("#blnks1").addClass("dsphdd");
+	step=1;
+}
+
+function step2()
+{
+	if(step==1)
+	{
+	$("#step2").addClass("dsphdd");
+	$("#test1").removeClass("dsphdd");
+	$("#test1").addClass("dspblk");
+	$("#tsts1").addClass("dsphdd");
+	step=2;
+	}
+	
+}
+
+function step3()
+{
+	if(step==2)
+	{
+	$("#step3").addClass("dsphdd");
+	$("#bur2").removeClass("dsphdd");
+	$("#bur2").addClass("dspblk");
+	$("#blank1").fadeOut(0);
+	$("#test1").fadeOut(0);
+	step=2;
+	}
+}
+
+
+
+	
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

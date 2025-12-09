@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		#CpHval{
+			border:none;width: 107px;position: absolute;margin-top: 287px;margin-left: 52px;height: 25px;z-index:2;text-align: center;font-size: 21px;line-height: 1;font-family: digital-7;
+		}
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">First step is the preparation of Test Sample. For this click on oil bottle to put 1gm of oil in beaker.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+		</div>
+		<div id="main"> 
+	  <img src="imgs1/wt.png" id="wt1" style="position: absolute; margin-top: 253px; width: 210px;">
+	  <img src="imgs1/proil.png" class="dsphdd" id="proil" style="position: absolute;margin-top: 110px;margin-left: 100px;width: 175px;z-index: 5;">
+	  <img src="imgs1/proil2.png" class="dsphdd" id="proil2" style="position: absolute;margin-top: 110px;margin-left: 400px;width: 85px;z-index: 5;">
+
+	  <img src="imgs1/pordrp.png" class="dsphdd" id="pordrp" style="position: absolute;margin-top: 105px;margin-left: 400px;width: 230px;z-index: 5">
+	
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 225px;width: auto;margin-top: 152px;">
+	  	<img src="imgs1/oil.png" id="oil" style="position: absolute;height: 175px;width: auto;" >
+	  </button>
+
+	  <button id="step4" onclick="step4();" style="position: absolute;margin-left: 350px;width: auto;margin-top: 205px;">
+	  	<img src="imgs1/flk1.png" id="flk1" style="position: absolute;height: 125px;" >
+	  	<img src="imgs1/oilflk.png" class="dsphdd" id="oilflk" style="position: absolute;height: 125px;" >
+	  	<img src="imgs1/oilflk2.png" class="dsphdd" id="oilflk2" style="position: absolute;height: 125px;" >
+	  	<img src="imgs1/test.png" class="dsphdd" id="test" style="position: absolute;height: 125px;" >
+	  
+	  </button>
+	
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left: 500px;width: auto;margin-top: 100px;">	  
+	  	<img src="imgs1/eth.png" id="eth" style="position: absolute;height: 230px;" >
+	  </button>
+
+	  <button id="step5" onclick="step5();" style="position: absolute;margin-left: 615px;width: auto;margin-top: 100px;">	  
+	  	<img src="imgs1/koh.png" id="koh" style="position: absolute;height: 230px;" >
+	  </button>
+
+	 
+	  <span type="text" class="counter" id="CpHval">0.0</span>
+	  <button onclick="step2()" id="step2" style="position: absolute;width: auto;margin-top: 186px;margin-left: 75px">
+	  	<img class="dspblk" src="imgs1/bk1.png" id="bk1" style="width: 55px;position: absolute;">
+	  	<img class="dsphdd" src="imgs1/oilbkr.png" id="oilbkr" style="width: 55px;position: absolute;">
+	  </button>
+
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 490px;margin-top: 340px;">5ml- Ethanol</span>
+	  <span id="kohs1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 610px;margin-top: 340px;">25ml- KOH</span>
+	  <span id="tsts1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 355px;margin-top: 340px;">TEST Sample</span>
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()
+{
+	$("#proil").removeClass("dsphdd");
+	//$("#oil").addClass("dspblk");
+	$("#CpHval").text("1.00");
+	startCounter();
+	$("#proil").delay(1500).fadeOut();
+	$("#oil").addClass("dsphdd");
+	$("#bk1").addClass("dsphdd");
+	$("#oilbkr").removeClass("dsphdd");
+	$("#oilbkr").addClass("dspblk");
+	$("#masteps").text("Click on beaker to pour oil into flask.");
+	step=1;
+}
+
+function step2()
+{
+	if (step==1)
+	{
+		$("#step2").addClass("dsphdd");
+		$("#CpHval").text("0.00");
+		$("#proil2").removeClass("dsphdd");
+		$("#proil2").delay(800).fadeOut();
+		$("#oilflk").addClass("dspblk");
+		$("#masteps").text("Click on measuring tube containing 5ml-Ethanol.");
+		step=2;
+	}	
+}
+
+
+function step3()
+{
+	if (step==2)
+	{
+		$("#step3").addClass("dsphdd");
+		$("#eths1").addClass("dsphdd");
+		$("#pordrp").removeClass("dsphdd");
+		$("#pordrp").delay(800).fadeOut();
+		$("#flk1").removeClass("dspblk");
+		$("#flk1").addClass("dsphdd");
+		$("#oilflk").removeClass("dspblk");
+		$("#oilflk").addClass("dsphdd");
+		$("#oilflk2").addClass("dspblk");
+		$("#masteps").text("Click on Test Sample to shake it well.");
+		step=3;
+	}	
+}
+
+function step4()
+{
+	if (step==3)
+	{
+		$("#oilflk2").addClass("dsphdd");
+		$('#oilflk2').addClass('mixx');
+		setTimeout(function(){
+		    $('#oilflk2').removeClass('mixx');
+		},2000);
+		step=4;
+	$("#masteps").text("Click on measuring tube containing 25ml-KOH.");
+	}
+	if (step==5)
+	{
+		$("#test").addClass("dsphdd");
+		$('#test').addClass('mixx');
+		setTimeout(function(){
+		    $('#test').removeClass('mixx');
+		},2000);
+		step=6;
+	}
+	if (step==7)
+	{
+		$("#test0").addClass("dsphdd");
+		$('#test0').addClass('mixx');
+		setTimeout(function(){
+		    $('#test0').removeClass('mixx');
+		},1000);
+		$("#test0").delay(500).fadeOut();
+		$("#test1").addClass("dspblk");
+		$("#test1").hide().fadeIn(500);
+		$('#test1').addClass('mixx');
+		setTimeout(function(){
+		    $('#test1').removeClass('mixx');
+		},1000);
+		step=8;
+	}	
+}
+
+function step5()
+{
+	if (step==4)
+	{
+		$("#step5").addClass("dsphdd");
+		$("#kohs1").addClass("dsphdd");
+		$("#pordrp").addClass("dspblk");
+		$("#pordrp").fadeIn(0);
+		$("#pordrp").delay(800).fadeOut();
+		$("#oilflk2").removeClass("dspblk");
+		$("#oilflk2").addClass("dsphdd");
+		$("#test").addClass("dspblk");
+		step=5;
+		$("#masteps").text("Click on Test Sample again to shake it well.");
+		$("#nextstep").css("visibility","visible");
+	}	
+}
+
+
+
+
+function startCounter(){
+	$('.counter').each(function (index) {
+		var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+	    $(this).prop('Counter',0).animate({
+	        Counter: $(this).text()
+	    }, {
+	        duration: 2000,
+	        easing: 'swing',
+	        step: function (now) {
+	            $(this).text(parseFloat(now).toFixed(size));
+	        }
+	    });
+	});
+}	
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

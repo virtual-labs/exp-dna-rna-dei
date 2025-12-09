@@ -1,1 +1,1 @@
-## Analyse quality and quantity of DNA, RNA 
+## Analyze quality and quantity of fats

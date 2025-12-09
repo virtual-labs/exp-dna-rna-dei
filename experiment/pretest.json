@@ -2,38 +2,64 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Identify the simple lipid from the following?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Lecithin",
+        "b": "Fatty acid",
+        "c": "Triacylglycerol",
+        "d": "Steroids"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "All of the following are complex lipids, Except?",
+      "answers": {
+        "a": "Phosphatidic acid",
+        "b": "Cerebroside",
+        "c": "Cardiolipin",
+        "d": "Cholesterol"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "Rancidity of lipids of lipid rich food stuffs is due to:?",
+      "answers": {
+        "a": "Hydrogenation of unsaturated fatty acids",
+        "b": "Reduction of fatty acids",
+        "c": "Oxidation of fatty acids",
+        "d": "Dehydrogenation of saturation fatty acids"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "Which of the following statement is true?",
+      "answers": {
+        "a": "Oxidative rancidity is observed more frequently in animal fats than vegetable fats",
+        "b": "Oxidative rancidity is observed more frequently in vegetable fats than animal fats",
+        "c": "Plants fats ado not undergo oxidative rancidity",
+        "d": "Oxidative rancidity can be effectively checked by dehydrogenation of fatty acids"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Number of milligrams of KOH required to neutralize fatty acid present in 1 g of fat is called?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Potassium number ",
+        "b": "Acid number",
+        "c": "Saponification number",
+        "d": "Iodine number"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
+
   ]
 }

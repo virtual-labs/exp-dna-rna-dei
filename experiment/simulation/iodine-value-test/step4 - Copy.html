@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+		
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps"> First Step is calibration of the pH meter. Click on pH 4.01 flask.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+      </div>
+      <hr>
+	 
+      <img src="imgs4/ppt1.png" id="ppt1" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt2.png" id="ppt2" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt3.png" id="ppt3" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt4.png" id="ppt4" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      <img src="imgs4/ppt5.png" id="ppt5" class="dsphdd" style="position: absolute;height: 500px;margin-top: 5px;z-index: 5;margin-left: 25px;" >
+      
+
+      <img src="imgs4/finl.png" id="finlbt" class="dsphdd" style="position: absolute;height: 165px;margin-top: 315px;z-index: 5;margin-left: 80px;" >
+      <img src="imgs4/fnlred.png" id="fnlred" class="dsphdd" style="position: absolute;height: 165px;margin-top: 315px;z-index: 5;margin-left: 80px;" >
+      <img src="imgs4/test0.png" id="test0" class="dsphdd" style="position: absolute;height: 165px;margin-top: 315px;z-index: 5;margin-left: 80px;">
+      <img src="imgs4/stg2.png" id="stg2" class="dsphdd" style="position: absolute;height: 165px;margin-top: 315px;z-index: 5;margin-left: 80px;">
+      <img src="imgs4/stgx.png" id="stgx" class="dsphdd" style="position: absolute;height: 165px;margin-top: 315px;z-index: 5;margin-left: 80px;">
+
+      <img src="imgs4/drop2.png" id="dropt" class="dsphdd" style="position: absolute;width: 110px;margin-top: 242px;z-index: 2;margin-left: 135px;" >
+     
+
+      <button id="step1" onclick="step1();" style="position: absolute;margin-left: 377px;width: auto;margin-top: 293px;">
+	  	<img src="imgs4/test.png" id="test" style="position: absolute;height: 165px;" >
+	  	<img src="imgs4/finl.png" id="finlt" class="dsphdd" style="position: absolute;height: 165px;" >
+	  </button>
+
+	  <button id="stepx" onclick="step4();" style="position: absolute;margin-left: 550px;width: auto;margin-top: 293px;">
+	  	<img src="imgs4/blank.png" id="blank" style="position: absolute;height: 165px;" >
+	  	<img src="imgs4/blank0.png" id="blank0" class="dsphdd" style="position: absolute;height: 165px;" >
+	  	<img src="imgs4/finl.png" id="finlb" class="dsphdd" style="position: absolute;height: 165px;" >
+	  </button>
+
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left: 725px;width: auto;margin-top: 278px;">	  
+	  	<img src="imgs4/phth.png" id="phth" style="position: absolute;height: 180px;" >
+	  	<img src="imgs4/phth2.png" id="phth2" class="dsphdd" style="position: absolute;height: 180px;" >
+	  </button>
+
+
+	  <button id="step2" onclick="step2();" style="position: absolute;margin-left: 100px;width: 60px;height: 40px;margin-top: 290px;z-index:5 ;border: none;background-color: transparent;"></button>
+	  
+	  <span id="hcls1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 150px;margin-top: 25px;">0.5N HCL</span>
+	  <span id="tsts1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 380px;margin-top: 465px;">TEST Sample</span>
+	  <span id="blnks1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 549px;margin-top: 465px;">BLANK Sample</span>
+	  <span id="phps1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 695px;margin-top: 465px;">TPhenolphthalein</span>
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	if (step==0)
+	{
+		$("#step1").addClass("dsphdd");
+		$("#finlbt").removeClass("dsphdd");
+		$("#finlbt").addClass("dspblk");
+		$("#tsts1").addClass("dsphdd");
+		step=1;
+	}
+
+}
+
+function step2()
+{
+	if (step==1)
+	{
+		$("#ppt1").addClass("dsphdd");
+		$("#ppt2").removeClass("dsphdd");
+		$("#ppt2").addClass("dspblk");
+
+		$("#finlbt").addClass("dsphdd");
+		$('#finlbt').addClass('mixx');
+		setTimeout(function(){
+		    $('#finlbt').removeClass('mixx');
+		},3000);
+		$("#finlbt").delay(2500).fadeOut();
+		$("#fnlred").addClass("dspblk");
+		$("#fnlred").hide().fadeIn(3500);
+		$('#fnlred').addClass('mixx');
+		setTimeout(function(){
+		    $('#fnlred').removeClass('mixx');
+		},3500);
+
+		$("#ppt3").removeClass("dsphdd");
+		$("#ppt3").addClass("dspblk");
+		$("#ppt3").hide().fadeIn(3000);
+		$("#ppt2").fadeOut(3500);
+		step=2;
+	}
+
+	if (step==10)
+	{
+		$("#ppt3").fadeOut(0);
+		$("#ppt4").removeClass("dsphdd");
+		$("#ppt4").addClass("dspblk");
+
+		$("#finlbt").addClass("dsphdd");
+		$('#finlbt').addClass('mixx');
+		setTimeout(function(){
+		    $('#finlbt').removeClass('mixx');
+		},3000);
+		$("#finlbt").delay(2500).fadeOut();
+		$("#fnlred").addClass("dspblk");
+		$("#fnlred").hide().fadeIn(3500);
+		$('#fnlred').addClass('mixx');
+		setTimeout(function(){
+		    $('#fnlred').removeClass('mixx');
+		},3500);
+
+		$("#ppt5").removeClass("dsphdd");
+		$("#ppt5").addClass("dspblk");
+		$("#ppt5").hide().fadeIn(3000);
+		$("#ppt4").fadeOut(3500);
+		step=8;
+	}
+
+	if (step==3)
+	{
+		$("#fnlred").hide().fadeOut(0);
+		$("#ppt3").fadeOut(0);
+		$("#ppt4").removeClass("dsphdd");
+		$("#ppt4").addClass("dspblk");
+		// $("#test0").hide().fadeOut(300);
+		$('#test0').addClass('mixx');
+		setTimeout(function(){
+		    $('#test0').removeClass('mixx');
+		},1500);
+		$("#test0").delay(1000).fadeOut();
+		
+		$("#stg2").addClass("dspblk");
+		$("#stg2").hide().fadeIn(1500);
+		$('#stg2').addClass('mixx');
+		setTimeout(function(){
+		    $('#stg2').removeClass('mixx');
+		},3500);
+		$("#stg2").delay(1000).fadeOut();
+
+		$('#stgx').addClass('dspblk');
+		$("#stgx").hide().fadeIn(3200);
+		$('#stgx').addClass('mixx');
+		setTimeout(function(){
+		    $('#stgx').removeClass('mixx');
+		},3500);
+		$("#ppt5").removeClass("dsphdd");
+		$("#ppt5").addClass("dspblk");
+		$("#ppt5").hide().fadeIn(3000);
+		$("#ppt4").fadeOut(3500);
+		step=4;
+	}
+
+}
+
+
+function step3()////
+{
+	if(step==2)
+	{
+		$("#phth").addClass("dsphdd");
+		$("#phth2").removeClass("dsphdd");
+		$("#phth2").addClass("dspblk");
+		$("#dropt").addClass("dspblk");
+		$("#dropt").delay(800).fadeOut();
+		$("#test").delay(800).fadeOut();
+
+		
+		$("#phth2").delay(900).fadeOut(0);
+		$("#phth").addClass("dspblk");
+		$("#phth").hide().delay(850).fadeIn(0);
+		
+		$("#test0").addClass("dspblk");
+		$("#test0").hide().fadeIn(500);
+		step=3;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
