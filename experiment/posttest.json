@@ -9,7 +9,7 @@
         "c": "The DNA sample has protein contamination",
         "d": "The DNA concentration is too low"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "c"
     },
     {
       "question": "Which of the following statements is true regarding the purity of nucleic acids?",
@@ -19,7 +19,7 @@
         "c": "A₂₆₀/A₂₈₀ ratio of ~2.0 suggests pure RNA",
         "d": "A₂₆₀/A₂₈₀ ratio below 1.0 indicates very pure DNA"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "c"
     },
     {
       "question": "The absorbance at 230 nm primarily reflects contamination from:",
@@ -29,7 +29,7 @@
         "c": "RNA",
         "d": "Agarose"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "b"
     },
     {
       "question": "In agarose gel electrophoresis, intact chromosomal DNA appears as:",
@@ -39,7 +39,7 @@
         "c": "Multiple sharp bands of different sizes",
         "d": "A faint streak near the bottom"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "a"
     },
     {
       "question": "If DNA bands appear as a smear rather than discrete bands, what is the most likely reason?",
@@ -49,7 +49,7 @@
         "c": "Incorrect buffer concentration",
         "d": "High-purity DNA"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "b"
     },
     {
       "question": "The direction of DNA movement in agarose gel electrophoresis is due to:",
@@ -59,7 +59,7 @@
         "c": "Neutral charge on the sugar-phosphate backbone",
         "d": "Charge from ethidium bromide binding"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "b"
     },
     {
       "question": "During electrophoresis, why are samples mixed with loading dye before being loaded into wells?",
@@ -69,7 +69,7 @@
         "c": "To make the sample denser and visible during loading",
         "d": "To digest RNA contamination"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "c"
     },
     {
       "question": "A student obtained fluctuating readings on the spectrophotometer. The most probable cause is:",
@@ -79,7 +79,7 @@
         "c": "RNA contamination",
         "d": "Ethidium bromide presence"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "a"
     },
     {
       "question": "Which of the following statements best explains the principle of agarose gel electrophoresis?",
@@ -89,7 +89,7 @@
         "c": "DNA fragments are separated by sequence composition",
         "d": "DNA fragments move randomly through the gel"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "b"
     },
     {
       "question": "What safety precaution must be observed when using ethidium bromide?",
@@ -99,7 +99,7 @@
         "c": "Mix it with buffers before heating",
         "d": "It is safe to use without PPE"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "b"
     }
   ]
 }
