@@ -30,6 +30,13 @@ The quantitation can be performed using any of the following methods:
 
 ## UV Absorbance for DNA or RNA quantification
 
+The analysis is based on a UV–Visible spectrophotometer, the underlying principle follows the Beer–Lambert Law, which states that the absorbance of a solution is directly proportional to the concentration of the absorbing species and the path length of the light through the sample. Mathematically, it is expressed as:
+A = &epsilon;cl
+
+where A is absorbance, &epsilon; is the molar absorptivity, c is the concentration of the analyte, and l is the path length of the cuvette. In lipid/fat analysis using UV-Vis spectroscopy, the absorbance measured at a specific wavelength is therefore used to quantitatively estimate lipid concentration, assuming linearity within the working range of the instrument.
+
+This makes UV spectrophotometry a reliable quantitative method for fat and lipid analysis under controlled conditions.
+
 The most common and instant technique used to determine both nucleic acid concentration and purity is absorbance. Absorbance measurements can be used to estimate the concentration of DNA or RNA in purified samples.
  
 UV absorbance is measured by small-volume spectrophotometers such as the NanoDrop<sup>TM</sup> instrument or using a quartz cuvette, which is then placed inside the UV spectrophotometer.  The nucleic acid sample is placed either as a drop in a nanodrop or a quartz cuvette carrying nucleic acid samples. Nanodrop, or low-volume quartz cuvette spectrophotometer enables the analysis of sample volumes as low as 1&mu;L.  UV light is passed through the sample at a specified path length, and concentrations of nucleic acids can be directly calculated by measuring absorbance values at 260 nm against a blank using the Beer-Lambert's equation:
@@ -61,6 +68,17 @@ Concentration (&mu;g/mL) = (A<sub>260</sub> measurement - A<sub>320</sub> measur
 Total yield can then be obtained by multiplying the nucleic acid concentration by the final total purified sample volume.
 
 DNA yield (&mu;g) = DNA concentration &times; total sample volume (mL)
+
+UV Spectrophotometric Measurement: DNA absorbs UV light maximally at 260 nm due to the  aromatic bases. According to standard calibration: where 1 A<sub>260</sub> unit &asymp; 50 &mu;g/mL for double-stranded DNA, Most UV spectrophotometers can reliably detect DNA concentrations in the range of ~2-100 &mu;g/mL, depending on path length and instrument sensitivity.
+
+Therefore, a few micrograms of DNA, dissolved in an appropriate volume (e.g., 50-200 &mu;L), generate sufficient absorbance for accurate quantification while remaining within the linear range of the Beer-Lambert law.
+
+The agarose gel electrophoresis requires typically DNA quantities of 0.1-1.0 &mu;g per band , and  sufficient for visualization using intercalating dyes (e.g., ethidium bromide or safer alternatives). The microgram-level DNA ensures the clear, visible bands, reliable size estimation and minimal background noise.
+
+The microgram quantities of DNA are adequate and appropriate for both UV spectrophotometric quantification (based on the ratio of absorbance at 260 nm and 280 nm) and Gel electrophoretic analysis (based on intercalating dye visualization). The details are provided in the experimental procedure.
+
+This confirms that the proposed sample quantity is experimentally sound for both analytical techniques.
+
 
 ## Gel Electrophoresis for DNA AND RNA Quantitation
  

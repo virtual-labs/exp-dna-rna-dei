@@ -9,7 +9,7 @@
         "c": "Measurement of fluorescence of ethidium bromide-bound DNA",
         "d": "Measurement of color change due to DNA–protein interaction"
       },
-      "correctAnswer": "b"
+      "correctAnswer": "b",
     },
     {
       "question": "Which wavelength is used to measure DNA concentration?",
@@ -19,8 +19,8 @@
         "c": "280 nm",
         "d": "325 nm"
       },
-      "correctAnswer": "b"
-    },
+      "correctAnswer": "b",
+    }
     {
       "question": "An A₂₆₀ of 1.0 corresponds to how much double-stranded DNA in 1 mL of solution?",
       "answers": {
@@ -29,7 +29,7 @@
         "c": "50 µg/mL",
         "d": "100 µg/mL"
       },
-      "correctAnswer": "c"
+      "correctAnswer": "c",
     },
     {
       "question": "Which ratio indicates high-purity DNA with minimal protein contamination?",
@@ -39,7 +39,7 @@
         "c": "A₂₆₀/A₂₈₀ = 1.8-1.9",
         "d": "A₂₆₀/A₂₈₀ = 2.5"
       },
-      "correctAnswer": "c"
+      "correctAnswer": "c",
     },
     {
       "question": "What does a low A₂₆₀/A₂₃₀ ratio (<1.5) indicate?",
@@ -49,7 +49,7 @@
         "c": "Presence of degraded DNA",
         "d": "Pure DNA sample"
       },
-      "correctAnswer": "b"
+      "correctAnswer": "b",
     },
     {
       "question": "Why should TNE buffer be used instead of water for DNA dilution?",
@@ -59,7 +59,7 @@
         "c": "It reacts with proteins to improve purity",
         "d": "It removes RNA contamination"
       },
-      "correctAnswer": "b"
+      "correctAnswer": "b",
     },
     {
       "question": "What type of cuvette must be used for UV spectrophotometry?",
@@ -69,7 +69,7 @@
         "c": "Quartz cuvette",
         "d": "Polystyrene cuvette"
       },
-      "correctAnswer": "c"
+      "correctAnswer": "c",
     },
     {
       "question": "Which factor can cause false high absorbance readings in UV spectrophotometry?",
@@ -79,27 +79,17 @@
         "c": "Overdilution of DNA",
         "d": "Use of glass cuvettes"
       },
-      "correctAnswer": "b"
+      "correctAnswer": "b",
     },
     {
       "question": "What is the main function of ethidium bromide in gel electrophoresis?",
-      "answers": {
-        "a": "xxx",
-        "b": "xxx",
-        "c": "xxx",
-        "d": "xxx"
-      },
-      "correctAnswer": "x"
-    },
-    {
-      "question": "xxx",
       "answers": {
         "a": "To denature DNA",
         "b": "To intercalate between DNA bases and fluoresce under UV light",
         "c": "To act as a reducing agent",
         "d": "To act as a DNA stabilizer"
       },
-      "correctAnswer": "b"
+      "correctAnswer": "b",
     },
     {
       "question": "DNA migrates toward which electrode during gel electrophoresis?",
@@ -109,7 +99,7 @@
         "c": "Both equally",
         "d": "None of the above"
       },
-      "correctAnswer": "b"
+      "correctAnswer": "b",
     }
   ]
 }
