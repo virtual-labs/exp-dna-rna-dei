@@ -36,13 +36,12 @@ button {
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">This part of the experiment is called electrophoresis, where a 100V power supply is applied to the agarose gel. For this first click on electrophoresis tank shield to cover it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step7.html"> Next Step</a>
-      </div>
-      <hr>
-
-
-      <img src="images/mvimg.png" class="dsphdd" style="position: absolute;margin-top: 255px;margin-left: 198px;width: 27px;z-index: 2" id="movingImage">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">This part of the experiment is called electrophoresis, where a 100V power supply is applied to the agarose gel. For this first click on electrophoresis tank shield to cover it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step7.html"> Next Step</a>
+		</div>
+		<div id="main">
+      <img src="images/mvimg.png" class="dsphdd" style="position: absolute;margin-top: 255px;margin-left: 448px;width: 27px;z-index: 2" id="movingImage">
       <button id="moveButton" style="position: absolute;margin-left: 250px;margin-top: 80px;width: 200px;height: 75px;z-index: 5;border: none;background-color: transparent;"></button>
 
       <img src="images/frmfnl.png" id="frmfnl" style="position: absolute;margin-top: 10px;margin-left: 5px;width: 600px;">
@@ -106,7 +105,7 @@ $(document).ready(function() {
 		},1000);
 
     setTimeout(function(){
-			$("#masteps").text("Click on next setp for Visualization of result.");
+			$("#masteps").text("Click on next step for Visualization of result.");
 			$("#nextstep").css('visibility', 'visible').fadeIn(0);
 		},10000);
 

@@ -25,13 +25,11 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">In this part of the experiment, DNA samples are placed inside the agarose gel well.For this click on Microliter Pipette.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step6.html"> Next Step</a>
-      </div>
-      <hr>
-
-
-
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">In this part of the experiment, DNA samples are placed inside the agarose gel well.For this click on Microliter Pipette.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step6.html"> Next Step</a>
+		</div>
+		<div id="main">
       <img src="images/frm7.png" id="frm7" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
       <img src="images/frm8.png" id="frm8" class="dsphdd" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
       <img src="images/frm9.png" id="frm9" class="dsphdd" style="position: absolute;margin-top: 250px;margin-left: 5px;width: 425px;">
@@ -136,7 +134,7 @@ function step2()
 		$("#ppt1").css('visibility', 'hidden').fadeOut(0);
 		$("#ppt2").css('visibility', 'visible').fadeIn(0);
 		step=2;
-		$("#masteps").text("Now, click on the DNA ladder and load it into first well of Afarose gel.");
+		$("#masteps").text("Now, click on the DNA ladder and load it into first well of Agarose gel.");
 	}
 }
 
@@ -169,10 +167,11 @@ function step3()
 		
 		setTimeout(function(){
 			$("#pptdn21").css('visibility', 'hidden').fadeOut(0);
+			$("#ppt2").css('visibility', 'visible').fadeIn(100);
 		},3000);
 
 		step=3;
-		$("#masteps").text("Now, click on the DNA sample to load them into other wells of Afarose gel.");
+		$("#masteps").text("Now, click on the DNA sample to load them into other wells of Agarose gel.");
 	}
 }
 
@@ -188,6 +187,7 @@ function step4()
 		},100);
 
 		setTimeout(function(){
+			$("#ppt2").css('visibility', 'hidden').fadeOut(100);
 			$("#pptds11").css('visibility', 'visible').fadeIn(100);
 		},1000);
 		setTimeout(function(){

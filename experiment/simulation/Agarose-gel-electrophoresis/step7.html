@@ -33,12 +33,11 @@ button {
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">The final part of this experiment involves the visualization of results. For this, click on the UV transilluminator to place the gel inside it and visualize the results of the DNA samples.</p> <a id="nextstep" class="btn btn-success dsphdd" href="http://localhost/simulation3x/step2.html"> Next Step</a>
-      </div>
-      <hr>
-
-
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">The final part of this experiment involves the visualization of results. For this, click on the UV transilluminator to place the gel inside it and visualize the results of the DNA samples.</p> <a id="nextstep" class="btn btn-success dsphdd" href="xxx"> Next Step</a>
+		</div>
+		<div id="main"> 
       <button id="step1" onclick="step1();" style="position: absolute;margin-top: 120px;margin-left: 15px;">
 	      <img src="images/ansc.png" id="ansc" style="position: absolute;height:275px;">
 	      <img src="images/anso.png" id="anso" class="dsphdd" style="position: absolute;height:275px;">
