@@ -27,15 +27,15 @@
 <div class="row zero">
 		<div id="leftPanel">
 			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
-			<p id="masteps">In this step, we zero the blank sample to correct the baseline absorbance from the solvent, ensuring accurate sample absorbance quantification. For this click on the lid of the spectrophotometer to open it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step3.html"> Next Step</a>
+			<p id="masteps">In this step, we zero the blank sample to correct the baseline absorbance from the solvent, ensuring accurate sample absorbance quantification. For this click on the lid of the spectrophotometer to open it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step3-abso.html"> Next Step</a>
 		</div>
 		<div id="main"> 
-      <img src="images/spc1.png" id="spc1" class="dspblk" style="position: absolute;margin-top: 100px;height: 325px;">
-      <img src="images/spc2.png" id="spc2" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
-      <img src="images/spc3.png" id="spc3" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
-      <img src="images/spc4.png" id="spc4" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images-abso/spc1.png" id="spc1" class="dspblk" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images-abso/spc2.png" id="spc2" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images-abso/spc3.png" id="spc3" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
+      <img src="images-abso/spc4.png" id="spc4" class="dsphdd" style="position: absolute;margin-top: 100px;height: 325px;">
 	 
-	  <!-- <img src="images/spc3.png" id="spc3" style="position: absolute;height: 362px;">
+	  <!-- <img src="images-abso/spc3.png" id="spc3" style="position: absolute;height: 362px;">
  -->
 
 	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 30px;margin-top: 180px;width: 165px;height:195px;background-color: transparent;border: none;">
@@ -43,16 +43,16 @@
 
 
 	  <button id="step2" onclick="step2();" style="position: absolute;margin-left: 575px;width: auto;margin-top: 280px;border: none;">
-	  	<img src="images/sqtbw.png" id="sqtb2w" style="position: absolute;height: 145px;" >
-	  	<img src="images/sqtbxxx.png" id="t1" style="position: absolute;width: 35px;margin-top: 20px;z-index: 5" >
+	  	<img src="images-abso/sqtbw.png" id="sqtb2w" style="position: absolute;height: 145px;" >
+	  	<img src="images-abso/sqtbxxx.png" id="t1" style="position: absolute;width: 35px;margin-top: 20px;z-index: 5" >
 	  </button>
 	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 650px;width: auto;margin-top: 280px;border: none;">
-	  	<img src="images/sqtbw.png" id="sqtb1w" style="position: absolute;height: 145px;" >
-	  	<img src="images/sqtbxxx.png" id="t2" style="position: absolute;width: 35px;margin-top: 20px;z-index: 5" >
+	  	<img src="images-abso/sqtbw.png" id="sqtb1w" style="position: absolute;height: 145px;" >
+	  	<img src="images-abso/sqtbxxx.png" id="t2" style="position: absolute;width: 35px;margin-top: 20px;z-index: 5" >
 	 </button>
 
 	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 725px;width: auto;margin-top: 275px;border: none;">
-	  	<img src="images/tbox.png" id="tbox1" style="position: absolute;margin-left: 9px;height: 150px;" >
+	  	<img src="images-abso/tbox.png" id="tbox1" style="position: absolute;margin-left: 9px;height: 150px;" >
 	  	
 	  </button>
 
@@ -60,8 +60,8 @@
 	  
 	 
 	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 1000px;width: auto;margin-top: 10px;border: none;">
-	  	<img src="images/ss1.png" id="ss1" style="position: absolute;height: 420px;" >
-	  	<img src="images/ss1x.png" id="ss1x" class="dsphdd" style="position: absolute;height: 418px;margin-top: 1px;" >
+	  	<img src="images-abso/ss1.png" id="ss1" style="position: absolute;height: 420px;" >
+	  	<img src="images-abso/ss1x.png" id="ss1x" class="dsphdd" style="position: absolute;height: 418px;margin-top: 1px;" >
 	  </button>
 
 
@@ -69,14 +69,14 @@
 
 
 	  
-	  <img src="images/srn.png" id="srn4" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 537px;height: 400px;">
-	  <img src="images/srnx.png" id="srn4x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 537px;height: 400px;">
-	  <img src="images/srn.png" id="srn3" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 612px;height: 400px;">
-	  <img src="images/srnx.png" id="srn3x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 612px;height: 400px;">
-	  <img src="images/srn.png" id="srn2"  class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 745px;height: 400px;">
-	  <img src="images/srnx.png" id="srn2x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 745px;height: 400px;">
-	  <img src="images/srn.png" id="srn1x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 875px;height: 400px;">
-	  <img src="images/srne.png" id="srn1" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 875px;height: 400px;">
+	  <img src="images-abso/srn.png" id="srn4" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 537px;height: 400px;">
+	  <img src="images-abso/srnx.png" id="srn4x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 537px;height: 400px;">
+	  <img src="images-abso/srn.png" id="srn3" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 612px;height: 400px;">
+	  <img src="images-abso/srnx.png" id="srn3x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 612px;height: 400px;">
+	  <img src="images-abso/srn.png" id="srn2"  class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 745px;height: 400px;">
+	  <img src="images-abso/srnx.png" id="srn2x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 745px;height: 400px;">
+	  <img src="images-abso/srn.png" id="srn1x" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 875px;height: 400px;">
+	  <img src="images-abso/srne.png" id="srn1" class="dsphdd" style="position: absolute;margin-top: 00px;margin-left: 875px;height: 400px;">
 	  
 	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left: 950px;margin-top: 50px;width: 50px;height:50px;background-color: transparent;border: none"></button>
 
