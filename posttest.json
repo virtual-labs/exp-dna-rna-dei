@@ -1,0 +1,105 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "During the UV spectrophotometric analysis, a DNA sample showed an A₂₆₀/A₂₈₀ ratio of 1.45. What does this indicate?",
+      "answers": {
+        "a": "The DNA is pure and intact",
+        "b": "The DNA is contaminated with RNA",
+        "c": "The DNA sample has protein contamination",
+        "d": "The DNA concentration is too low"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which of the following statements is true regarding the purity of nucleic acids?",
+      "answers": {
+        "a": "RNA and DNA both absorb maximally at 280 nm",
+        "b": "The A₂₆₀/A₂₃₀ ratio indicates protein contamination",
+        "c": "A₂₆₀/A₂₈₀ ratio of ~2.0 suggests pure RNA",
+        "d": "A₂₆₀/A₂₈₀ ratio below 1.0 indicates very pure DNA"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "The absorbance at 230 nm primarily reflects contamination from:",
+      "answers": {
+        "a": "Proteins",
+        "b": "Salts, organic solvents, and chaotropic agents",
+        "c": "RNA",
+        "d": "Agarose"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "In agarose gel electrophoresis, intact chromosomal DNA appears as:",
+      "answers": {
+        "a": "A sharp, single band near the top of the gel",
+        "b": "A diffuse smear",
+        "c": "Multiple sharp bands of different sizes",
+        "d": "A faint streak near the bottom"
+      },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "If DNA bands appear as a smear rather than discrete bands, what is the most likely reason?",
+      "answers": {
+        "a": "Overloading of the sample",
+        "b": "Degradation of DNA",
+        "c": "Incorrect buffer concentration",
+        "d": "High-purity DNA"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "The direction of DNA movement in agarose gel electrophoresis is due to:",
+      "answers": {
+        "a": "Positive charge on the phosphate backbone",
+        "b": "Negative charge on the phosphate backbone",
+        "c": "Neutral charge on the sugar-phosphate backbone",
+        "d": "Charge from ethidium bromide binding"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "During electrophoresis, why are samples mixed with loading dye before being loaded into wells?",
+      "answers": {
+        "a": "To stain the DNA",
+        "b": "To increase DNA concentration",
+        "c": "To make the sample denser and visible during loading",
+        "d": "To digest RNA contamination"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "A student obtained fluctuating readings on the spectrophotometer. The most probable cause is:",
+      "answers": {
+        "a": "Low DNA concentration",
+        "b": "Excessive light scattering",
+        "c": "RNA contamination",
+        "d": "Ethidium bromide presence"
+      },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "Which of the following statements best explains the principle of agarose gel electrophoresis?",
+      "answers": {
+        "a": "DNA fragments are separated according to their charge density",
+        "b": "DNA fragments are separated based on molecular weight and size",
+        "c": "DNA fragments are separated by sequence composition",
+        "d": "DNA fragments move randomly through the gel"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What safety precaution must be observed when using ethidium bromide?",
+      "answers": {
+        "a": "Avoid exposure to UV light",
+        "b": "Use nitrile gloves and dispose of gels properly as hazardous waste",
+        "c": "Mix it with buffers before heating",
+        "d": "It is safe to use without PPE"
+      },
+      "correctAnswer": "b"
+    }
+  ]
+}
