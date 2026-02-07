@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.counter{
+			position: absolute;
+			background-color: transparent;
+			margin-top: 130px;
+			padding: 2px;
+			font-weight: bold;
+			font-size: 21px;
+			color: #777;
+			transform: rotate(270deg);
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps">DNA Quantitation Using a Spectrophotometer.</p>
+      </div>
+      <hr>
+  	  <div class="col-lg-4" style="min-height: 100vh;border-right: 2px solid #555;">
+
+  	  	<div class="form-group">
+	        <p>Total sample volume (DNA + Buffer): <span id="DNAV">0</span></p>
+	        <input type="range" class="form-control-range" id="DNAI" min="0" max="100">
+	  	</div>
+
+  	  	<div class="form-group">
+		      <p>DNA sample absorbance at A260 : <span id="A260V">0</span></p>
+		      <input type="range" class="custom-range" id="A260I" step="0.01" min="0" max="2.5">
+		</div>
+
+		<div class="form-group">
+		      <p>DNA sample absorbance at A280 : <span id="A280V">0</span></p>
+		      <input type="range" class="custom-range" id="A280I" step="0.01" min="0" max="0.5">
+		</div>
+
+		<div class="form-group">
+	        <p>Dilution factor: <span id="DFactV">0</span></p>
+	        <input type="range" class="form-control-range" id="DFactI" min="0" max="100">
+	    </div>
+
+	    <button id="Calc" onclick="CaclV();" class="btn btn-success" style="width: 100%;">Analyze the DNA sample</button>
+
+		    
+  	  </div>
+  	  <div class="col-lg-8">
+  	  	<div id="expln" class="dsphdd">
+  	  	  <h3> The ratio of A60/A80 : <span id="Rratio"></span>&#181l</h3>
+  	  	  <p id="Rexp"></p>
+  	  	  <h3> The Concentration (DNA quality): <span id="Codna">&#181g/ml</span></h3>
+  	  	  <p id="Coexp"></p>
+  	  	  <h3> The Yield (DNA quantity): <span id="Ydna"></span>&#181g</h3>
+  	  	  <p id="Yexp"></p>
+  	  	<div>
+		    
+	  </div>
+
+   </div>
+</div>
+
+<!-- <script>
+    // Wait for the document to be ready
+    $(document).ready(function() {
+      // Initialize the range slider
+
+    });
+  </script> -->
+
+
+    <script>
+    $(document).ready(function(){
+      $('#A260I').on('input', function() {
+        $('#A260V').text($(this).val());
+      });
+
+      $('#A280I').on('input', function() {
+        $('#A280V').text($(this).val());
+      });
+
+      $('#DNAI').on('input', function() {
+        $('#DNAV').text($(this).val());
+      });
+
+      $('#DFactI').on('input', function() {
+        $('#DFactV').text($(this).val());
+      });
+
+    });
+
+
+	function CaclV()
+	{
+		var A260V=$('#A260I').val();
+		var A280V=$('#A280I').val();
+		var DNAV=$('#DNAI').val();
+		var DFactV=$('#DFactI').val();
+
+		var Ratio=A260V/A280V;
+		var Conc=A260V*50*DFactV;
+		//DNA yield (µg) = DNA concentration × total sample volume (mL)
+		var yld= Conc*DNAV;
+		$('#Rratio').text(Ratio);
+		$('#Rexp').html("Below 1.7: Indicates the presence of protein contamination.<br>Around 1.8: Ideal for pure DNA.<br>Above 2.0: May suggest the presence of RNA contamination.");
+
+		$('#Codna').text(Conc);
+		$('#Coexp').html("Concentration (\u00B5g/mL) =A260 x Nucleic acid conversion factor x dilution factor. <br> Here Conversion factor for dsDNA: 50 \u00B5g/mL<br>")
+
+		$('#Ydna').text(yld);
+		$('#Yexp').html("DNA yield (\u00B5g) = DNA concentration (\u00B5g/mL) x total sample volume (mL)");
+
+		$("#expln").removeClass("dsphdd");
+		$("#expln").addClass("dspblk");
+
+
+		
+	}
+  </script>
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+	
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">The first part of the experiment is the preparation of agarose gel. For this, click on Agarose Powder to weight 1.5g of it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step2-agro.html"> Next Step</a>
+		</div>
+		<div id="main"> 
+      <button id="xx" onclick="step2();" style="position: absolute;margin-top: 225px;margin-left: 5px;border: none;">
+	  	<img src="images-agro/wt1.png" id="wt1" style="position: absolute;height:100px;width:228px;" >
+	  	<img src="images-agro/wt2.png" id="wt2" class="dsphdd" style="position: absolute;height:100px;width:228px;" >
+	  	<img src="images-agro/wt3.png" id="wt3" class="dsphdd" style="position: absolute;height:100px;width:228px;" >
+	  </button>
+
+	  <img src="images-agro/agroox.png" id="agroox" class="dsphdd" style="position: absolute;margin-left: 125px;margin-top: 90px;height: 130px;" >
+
+	  <img src="images-agro/por.png" id="por" class="dsphdd" style="position: absolute;margin-left: 245px;margin-top: 95px;height: 150px;" >
+
+	  <img src="images-agro/measpr.png" id="measpr" class="dsphdd" style="position: absolute;margin-left: 350px;margin-top: 125px;width: 275px;" >
+
+	  <button id="xx" onclick="step4();" style="position: absolute;margin-left: 300px;margin-top: 200px;width: 0px;border: none;">
+	  	<img src="images-agro/flsk.png" id="flsk"  style="position: absolute;height: 145px;">
+	  	<img src="images-agro/flskx.png" id="flskx" class="dsphdd"  style="position: absolute;height: 145px;">
+	  	<img src="images-agro/flskx2.png" id="flskx2" class="dsphdd"  style="position: absolute;height: 145px;">
+	  	<img src="images-agro/flskxx.png" id="flskxx" class="dsphdd"  style="position: absolute;height: 145px;">
+	  </button>
+
+	  <button id="xx" onclick="step1();" style="position: absolute;margin-left: 450px;margin-top: 200px;width: 0px;border: none;">
+	  	<img src="images-agro/agroc.png" id="agroc" style="position: absolute;height: 145px;" >
+	  </button>
+	  <button id="xx" onclick="step3();" style="position: absolute;margin-left: 600px;width: auto;margin-top: 85px;border: none;">
+	  	<img src="images-agro/meas.png" id="meas" style="position: absolute;height: 260px;" >
+	  </button>
+
+
+	 <span class="counter" id="CpHval" style="position: absolute;margin-top: 275px;margin-left: 100px;font-size: 21px;font-weight: bold;font-family: 'digital-7', sans-serif;z-index: 5;background-color: transparent;">00.00</span>
+	  
+
+
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 440px;margin-top: 350px;">Agarose Powder</span>
+	  <span id="eths2" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 585px;margin-top: 350px;">TAE/TBE Buffer</span>
+
+
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#wt1").addClass("dsphdd");
+	$("#wt2").removeClass("dsphdd");
+	$("#wt2").addClass("dspblk");
+	$("#agroox").removeClass("dsphdd");
+	$("#agroox").addClass("dspblk");
+	$("#agroc").addClass("dsphdd");
+	$("#eths1").addClass("dsphdd");
+	step=1;
+	$("#CpHval").text("1.50");
+	startCounter();
+	$("#masteps").text("Click on 1.5g agarose powder placed on the weight machine to pour it into a blank flask.");
+
+	setTimeout(function(){
+	   	$("#agroox").removeClass("dspblk");
+		$("#agroox").addClass("dsphdd");
+	},2200);
+
+}
+
+
+
+function step2()
+{
+	if (step==1)
+	{
+		$("#wt2").removeClass("dspblk");
+		$("#wt2").addClass("dsphdd");
+		$("#wt3").removeClass("dsphdd");
+		$("#wt3").addClass("dspblk");
+
+		$("#por").removeClass("dsphdd");
+		$("#por").addClass("dspblk");
+		step=2;
+		$("#masteps").text("Now click on 150ml TAE/TBE buffer solution to pour it into the flask.");
+
+		setTimeout(function(){
+		   	$("#por").removeClass("dspblk");
+			$("#por").addClass("dsphdd");
+			$("#flsk").removeClass("dspblk");
+			$("#flsk").addClass("dsphdd");
+			$("#flskx").removeClass("dsphdd");
+			$("#flskx").addClass("dspblk");
+		},1000);
+	}
+
+}
+
+
+
+
+function step3()
+{
+	if (step==2)
+	{
+		$("#meas").removeClass("dspblk");
+		$("#meas").addClass("dsphdd");
+		$("#eths2").addClass("dsphdd");
+		$("#measpr").removeClass("dsphdd");
+		$("#measpr").addClass("dspblk");
+
+		step=3;
+		$("#masteps").text("Now click on the flask to mix the powder and buffer well.");
+		setTimeout(function(){
+		   	$("#measpr").removeClass("dspblk");
+			$("#measpr").addClass("dsphdd");
+			$("#flskx").removeClass("dspblk");
+			$("#flskx").addClass("dsphdd");
+			$("#flskx2").removeClass("dsphdd");
+			$("#flskx2").addClass("dspblk");
+		},1000);
+	}
+
+}
+
+function step4()
+{
+	if (step==3)
+	{
+		$("#nextstep").removeClass("dsphdd");
+		$('#nextstep').addClass('dspblk');	
+		$('#flskx2').addClass('mixx');
+		setTimeout(function(){
+		    $('#flskx2').removeClass('mixx');
+		    $("#flskxx").removeClass("dsphdd");
+
+		},1500);
+		$("#flskx2").delay(1500).fadeOut();
+		
+		
+		// 
+	}
+
+}
+
+
+
+function startCounter(){
+	$('.counter').each(function (index) {
+		var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+	    $(this).prop('Counter',0).animate({
+	        Counter: $(this).text()
+	    }, {
+	        duration: 2000,
+	        easing: 'swing',
+	        step: function (now) {
+	            $(this).text(parseFloat(now).toFixed(size));
+	        }
+	    });
+	});
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+

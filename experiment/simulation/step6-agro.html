@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.counter{
+			position: absolute;
+			background-color: transparent;
+			margin-top: 130px;
+			padding: 2px;
+			font-weight: bold;
+			font-size: 21px;
+			color: #777;
+			transform: rotate(270deg);
+		}
+#movingImage {
+  position: absolute;
+  transition: all 10s ease;
+}
+
+#movingImage.rotate {
+      transform: translateX(200px) rotate(-7deg); /* Adjust the distance and rotation angle as needed */
+    }
+button {
+  margin-top: 10px;
+}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">This part of the experiment is called electrophoresis, where a 100V power supply is applied to the agarose gel. For this first click on electrophoresis tank shield to cover it.</p> <a id="nextstep" class="btn btn-success dsphdd" href="step7-agro.html"> Next Step</a>
+		</div>
+		<div id="main">
+      <img src="images-agro/mvimg.png" class="dsphdd" style="position: absolute;margin-top: 255px;margin-left: 448px;width: 27px;z-index: 2" id="movingImage">
+      <button id="moveButton" style="position: absolute;margin-left: 250px;margin-top: 80px;width: 200px;height: 75px;z-index: 5;border: none;background-color: transparent;"></button>
+
+      <img src="images-agro/frmfnl.png" id="frmfnl" style="position: absolute;margin-top: 10px;margin-left: 5px;width: 600px;">
+      <img src="images-agro/frmfnl2.png" id="frmfnl2" class="dsphdd" style="position: absolute;margin-top: 10px;margin-left: 5px;width: 600px;">
+    <span id="volt" class="dsphdd" style="position: absolute;margin-top: 105px;margin-left: 315px;font-size: 21px;">100V</span>
+      
+	<button id="step1" onclick="step1();" style="position: absolute;margin-left: 450px;margin-top: 230px;width: 200px;height: 75px;z-index: 5;border: none;background-color: transparent;">
+		<img src="images-agro/sheet1.png" style="position: absolute;width: 400px;">
+	</button>
+
+	<img src="images-agro/sheet1.png" id="sheet1" class="dsphdd" style="position: absolute;margin-left: 95px;margin-top: 230px;width: 423px;">
+
+	  <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 150px;margin-top: 35px;">Power Pack</span>
+	  <span id="eths2" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 250px;margin-top: 435px;">Electrophoresis Tank</span>
+	  <span id="eths3" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 700px;margin-top: 435px;">Tank cover</span>
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()
+{
+	if(step==0)
+	{
+		$("#step1").css('visibility', 'hidden').fadeOut(10);
+		$("#sheet1").css('visibility', 'visible').fadeIn(100);
+		$("#eths3").css('visibility', 'hidden').fadeOut(10);
+		step=1;
+		$("#masteps").text("Now, click on the  green button of Power Pack to supply 100V until the DNA reaches the desired distance, and stop the supply immediately to ensure that the DNA samples do not go out of the gel.");
+	}
+}
+
+$(document).ready(function() {
+  var initialPosition = { left: 50 };
+
+  $("#movingImage").css(initialPosition);
+
+  $("#moveButton").click(function() {
+
+  	if (step==1){
+
+    var newPosition = { left: "+=175" }; // Move 50 pixels to the right
+
+    $("#volt").css('visibility', 'visible').fadeIn(0);
+    
+    
+    setTimeout(function(){
+
+    		$("#frmfnl2").css('visibility', 'visible').fadeIn(0);
+    		$("#frmfnl").css('visibility', 'hidden').fadeOut(0);
+    		$("#movingImage").css('visibility', 'visible').fadeIn(100);
+		},100);
+    setTimeout(function(){
+			$("#movingImage").addClass("rotate");
+		},1000);
+
+    setTimeout(function(){
+			$("#masteps").text("Click on next step for Visualization of result.");
+			$("#nextstep").css('visibility', 'visible').fadeIn(0);
+		},10000);
+
+
+	}
+
+  });
+});
+
+	
+</script>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.counter{
+			position: absolute;
+			background-color: transparent;
+			margin-top: 130px;
+			padding: 2px;
+			font-weight: bold;
+			font-size: 21px;
+			color: #777;
+			transform: rotate(270deg);
+		}
+#movingImage {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+button {
+  margin-top: 10px;
+}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">The final part of this experiment involves the visualization of results. For this, click on the UV transilluminator to place the gel inside it and visualize the results of the DNA samples.</p> <a id="nextstep" class="btn btn-success dsphdd" href="xxx"> Next Step</a>
+		</div>
+		<div id="main"> 
+      <button id="step1" onclick="step1();" style="position: absolute;margin-top: 120px;margin-left: 15px;">
+	      <img src="images-agro/ansc.png" id="ansc" style="position: absolute;height:275px;">
+	      <img src="images-agro/anso.png" id="anso" class="dsphdd" style="position: absolute;height:275px;">
+	      <img src="images-agro/ansog.png" id="ansog" class="dsphdd" style="position: absolute;height:275px;">
+      </button>
+      <img src="images-agro/tv.png" style="position: absolute;margin-top: 50px;margin-left: 225px;width: 400px;">
+  
+      	<img src="images-agro/frm6.png" id="frm6"  style=" position: absolute;margin-top: 300px;margin-left: 600px;width: 275px;">
+      	<img src="images-agro/frm1.png" id="frm1" class="dsphdd" style="position: absolute;margin-top: 300px;margin-left: 600px;width: 275px;">
+ 
+
+      <div id="tv" style="position: absolute;margin-left: 243px;margin-top: 68px;width: 364px;height: 198px;background-color: #fff;z-index: 5" class="dsphdd">
+      	<img src="images-agro/load1.gif" id="load1" class="dsphdd" style="position: absolute;margin-top:35px;margin-left: 55px;width: 250px;height: auto;">
+      	<img src="images-agro/xxx.png" id="xxx" class="dsphdd" style="position: absolute;margin-top:0px;margin-left: 25px;width: 315px;height: auto;">
+      </div>
+
+      <button id="step2" onclick="location.href='step8-agro.html';" style="position: absolute;margin-left: 243px;margin-top: 68px;width: 364px;height: 198px;background-color: transparent;z-index: 5;border: none;" class="dsphdd">
+
+      </button>
+
+
+      <span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 75px;margin-top: 375px;">UV Transilluminator</span>
+      <span id="eths2" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 385px;margin-top: 375px;">Monitor</span>
+      <span id="eths3" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 675px;margin-top: 425px;">Electrophoresis Tank</span>
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()
+{
+	if(step==0)
+	{
+		$("#ansc").css('visibility', 'hidden').fadeOut(0);
+		$("#tv").css('visibility', 'visible').fadeIn(0);
+		$("#load1").css('visibility', 'visible').fadeIn(0);
+		$("#anso").css('visibility', 'visible').fadeIn(0);
+		setTimeout(function(){
+			$("#frm1").css('visibility', 'visible').fadeIn(0);
+			
+		},1500);
+		setTimeout(function(){
+			$("#frm6").css('visibility', 'hidden').fadeOut(0);
+			$("#anso").css('visibility', 'hidden').fadeOut(0);
+			$("#ansog").css('visibility', 'visible').fadeIn(0);
+		},2500);
+		setTimeout(function(){
+			$("#ansog").css('visibility', 'hidden').fadeOut(0);
+			$("#ansc").css('visibility', 'visible').fadeIn(0);
+		},3500);
+		setTimeout(function(){
+			$("#load1").css('visibility', 'hidden').fadeOut(0);
+			$("#xxx").css('visibility', 'visible').fadeIn(0);
+			$("#step2").css('visibility', 'visible').fadeIn(0);
+		},4500);
+		$("#masteps").text("Click on the monitor to analyze it in detail.");
+	}
+}
+
+
+
+	
+</script>
+
+
+
+
+
+
+
+</body></html>
